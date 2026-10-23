@@ -1,0 +1,61 @@
+titel: Rändelmaschinen
+oberzeile: Thermisches Trennen
+einleitung: Rändelmaschinen formen eine Rändelung in der Verbundzone eines Verbundprofils – ein kosteneffizienter Weg, um die statische Festigkeit der Profile zu optimieren.
+bild: /uploads/typ-raendelmaschine.webp
+kurz: Ausformung einer Rändelung in der Verbundzone für mehr Grip und statische Festigkeit.
+reihenfolge: 1
+bloecke:
+  - type: bildtext
+    titel: Pionier der Aluprofil-Verbindungstechnik
+    inhalt: |
+      Mit einer gerändelten Nut werden der Grip und der Verbund zwischen zwei verbundenen Profilen deutlich erhöht.
+
+      Als Pionier in der Aluprofil-Verbindungstechnik haben wir **im Jahre 1979** mit der Markteinführung der ersten Rändelmaschine den Markt revolutioniert. Heute bieten wir Rändelmaschinen in unterschiedlichen Ausführungen an, um alle Bedürfnisse unserer Kunden – von kleineren bis zu grossen Produktionsmengen mit Automatisierung – abzudecken.
+    bild: /uploads/hero-raendelmaschinen.webp
+    alt: Rändelmaschinen
+  - type: karten
+    hell: true
+    titel: Ausführungen
+    spalten: '2'
+    bildformat: breit
+    eintraege:
+      - titel: Typ S
+        text: Preisgünstige Maschine, entwickelt für kleine Produktionsmengen von einfachen und kleineren Profilen wie typische Fenster- oder Türprofile. Geeignet für Firmen, welche Rändelmaschinen benötigen, diese jedoch nicht im Dauereinsatz betreiben.
+        bild: /uploads/rm-typ-s.webp
+        alt: Rändelmaschine Typ S
+      - titel: Typ LK eco
+        text: Mittelklasse-Maschine für alle möglichen Typen von Fenster-, Tür- und Fassadenprofilen, komfortable und schnelle Verstellung, aber nicht mit Achsensteuerung (CNC) verfügbar. Geeignet für Firmen, welche ihre Rändelmaschine viel benutzen, jedoch nicht sehr oft Profilwechsel haben.
+        bild: /uploads/rm-typ-lk-eco.webp
+        alt: Rändelmaschine Typ LK eco
+      - titel: Typ LK1 Handverstellung
+        text: Für mittlere Produktionsmengen von Profilen mit einfachen und komplexen Querschnitten. Optional mit CNC-Steuerung, was oft in vollautomatischen Anlagen gewünscht ist. Einstellungen können gespeichert und wieder aufgerufen werden – das verkürzt die Einrichtzeit und vereinfacht das Einrichten.
+        bild: /uploads/rm-typ-lk1.webp
+        alt: Rändelmaschine Typ LK1
+      - titel: Typ LK2 mit Achsensteuerung
+        text: Rändelt die Profile mit den Verbundnuten nach unten gerichtet und wird vor allem beim kombinierten Rändel-/Montage-Verfahren verwendet. Durch eine Kombination von LK1 und LK2 werden die Profile gleichzeitig oben und unten gerändelt – für eine vollautomatische Anlage.
+        bild: /uploads/rm-typ-lk2.webp
+        alt: Rändelmaschine Typ LK2
+  - type: faq
+    titel: Häufige Fragen zu Rändelmaschinen
+    fragen:
+      - frage: Was macht eine Rändelmaschine?
+        antwort: Sie formt eine strukturierte Rändelung in die Verbundzone von Profilen, um den mechanischen Grip und die statische Festigkeit zu maximieren.
+      - frage: Für welche Branchen ist die Rändelung wichtig?
+        antwort: Hauptsächlich im Metall- und Fensterbau sowie bei der Fertigung von Isolier- und Verbundprofilen.
+      - frage: Welche Vorteile bietet der Einsatz?
+        antwort: Es ist ein kosteneffizienter Weg, um den Materialverbund zweier Komponenten extrem belastbar zu machen.
+      - frage: Wie ist eine Rändelmaschine aufgebaut?
+        antwort: Sie besteht typischerweise aus präzisen Antriebs- und Rollstationen, die den Druck gleichmässig auf das Profil übertragen.
+      - frage: Lässt sich die Maschine an verschiedene Profilbreiten anpassen?
+        antwort: Ja, moderne Anlagen verfügen über flexible, teils automatisierte Breiten- und Tiefenverstellungen.
+      - frage: Ist der Betrieb für den Dauereinsatz geeignet?
+        antwort: Robuste Industrie-Ausführungen sind für den anspruchsvollen Mehrschicht- oder 24-Stunden-Einsatz ausgelegt.
+      - frage: Welche Wartungsarbeiten sind notwendig?
+        antwort: Regelmässiges Reinigen der Rändelrollen, Prüfen der mechanischen Führungen und Schmieren der beweglichen Teile.
+      - frage: Wo erhalte ich Ersatzteile oder technischen Support?
+        antwort: Direkt über uns oder unsere [Servicepartner](/kontakt/vertretungen).
+  - type: aufruf
+    titel: Mehr über Rändelmaschinen erfahren?
+    text: Die Müller TB Technologies AG ist Ihr erster Ansprechpartner.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

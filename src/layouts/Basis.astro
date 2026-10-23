@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+import Kopf from '../components/Kopf.astro';
+import Fuss from '../components/Fuss.astro';
+import einstellungen from '../data/einstellungen.json';
+import { zeige } from '../lib/hilfen';
+
+interface Props {
+  titel: string;
+  beschreibung?: string;
+}
+const { titel, beschreibung } = Astro.props;
+const firma = einstellungen.firma;
+const seitentitel = titel === firma ? firma : `${titel} – ${firma}`;
+const kanonisch = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{seitentitel}</title>
+    {zeige(beschreibung) && <meta name="description" content={zeige(beschreibung)} />}
+    {einstellungen.demo && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={kanonisch} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={seitentitel} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content={einstellungen.akzentfarbe} />
+    <style is:inline set:html={`:root{--akzent:${einstellungen.akzentfarbe};--rot:${einstellungen.zweitfarbe}}`}></style>
+  </head>
+  <body>
+    <a class="visually-hidden" href="#inhalt">Zum Inhalt springen</a>
+    <Kopf />
+    <main id="inhalt">
+      <slot />
+    </main>
+    <Fuss />
+  </body>
+</html>

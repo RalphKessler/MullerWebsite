@@ -1,0 +1,41 @@
+titel: Foliermaschinen
+oberzeile: Folieren
+einleitung: Bis zu vier Seiten gleichzeitig und sogar runde Oberflächen – unsere Foliermaschinen schützen Ihre Profiloberfläche zuverlässig gegen Beschädigung.
+bild: /uploads/fm-curvatis.webp
+kurz: Ein- und mehrseitiges Folieren, auch runde Oberflächen.
+reihenfolge: 1
+bloecke:
+  - type: bildtext
+    titel: Perfekte Führung, exakt platzierte Folie
+    inhalt: |
+      Qualitätsentscheidend im Folierprozess ist die perfekte Führung des Profils, damit die Folie an der exakt richtigen Stelle aufgebracht wird und die Oberfläche in allen nachfolgenden Bearbeitungsschritten zuverlässig vor Beschädigungen schützt.
+
+      Der Einschub der Profile erfolgt je nach Wunsch automatisch oder manuell, am Ende des Profils wird die Folie automatisch abgeschnitten. Hohe Flexibilität und schnelles Umrüsten sind weitere Vorteile – auf Kundenwunsch passen wir die Maschinen selbstverständlich individuell an.
+    bild: /uploads/typ-foliermaschine.webp
+    alt: Foliermaschine
+  - type: karten
+    hell: true
+    titel: Ausführungen
+    spalten: '3'
+    bildformat: quadrat
+    eintraege:
+      - titel: Typ Pronus 1
+        text: |
+          Folierung einer einzelnen Seite eines Profils von unten oder von oben. Das Profil wird manuell oder automatisch in die Maschine geschoben und danach zur Rändelmaschine transportiert; die Folie wird automatisch angepresst und abgeschnitten.
+
+          Autonom oder integriert in einer Isolierprofilanlage, als autonome Maschine einseitig und doppelseitig erhältlich.
+        bild: /uploads/fm-pronus1-bottom.webp
+        alt: Foliermaschine Pronus 1
+      - titel: Typ Pronus 2
+        text: Gleichzeitige Folierung der oberen und unteren Seite eines Profils. Wird üblicherweise als autonome Einheit eingesetzt, auf der auch nicht isolierte Profile abgedeckt werden können.
+        bild: /uploads/fm-pronus2.webp
+        alt: Foliermaschine Pronus 2
+      - titel: Typ Curvatis
+        text: Gleichzeitiges Folieren von bis zu vier Seiten an diversen Profilformen, auch runde Oberflächen. Autonom betrieben und einfach an sehr verschiedene Profilformen anpassbar.
+        bild: /uploads/fm-curvatis.webp
+        alt: Foliermaschine Curvatis
+  - type: aufruf
+    titel: Die passende Foliermaschine finden
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

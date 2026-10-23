@@ -1,0 +1,192 @@
+---
+import navigation from '../data/navigation.json';
+import einstellungen from '../data/einstellungen.json';
+import { link } from '../lib/hilfen';
+
+type Punkt = { titel: string; link: string; unterpunkte?: { titel: string; link: string }[] };
+const haupt = navigation.haupt as Punkt[];
+const aktuell = Astro.url.pathname;
+const istAktiv = (ziel: string) => {
+  const url = link(ziel);
+  return url !== '/de/' && aktuell.startsWith(url);
+};
+const tel = einstellungen.telefon.replace(/[^+\d]/g, '');
+---
+<header class="kopf">
+  <div class="container leiste">
+    <a class="marke" href="/de/" aria-label={`${einstellungen.firma} – Startseite`}>
+      <img src="/logo.svg" alt={einstellungen.kurzname} width="172" height="50" />
+    </a>
+
+    <button class="menu-knopf" type="button" aria-expanded="false" aria-controls="hauptmenu">
+      <span class="visually-hidden">Menü</span>
+      <span class="striche" aria-hidden="true"></span>
+    </button>
+
+    <nav id="hauptmenu" class="menu" aria-label="Hauptnavigation">
+      <ul>
+        {haupt.map((p) => (
+          <li class:list={{ hat: p.unterpunkte?.length, aktiv: istAktiv(p.link) }}>
+            <a href={link(p.link)} aria-current={istAktiv(p.link) ? 'page' : undefined}>{p.titel}</a>
+            {p.unterpunkte?.length && (
+              <ul class="unter">
+                {p.unterpunkte.map((u) => (
+                  <li><a href={link(u.link)}>{u.titel}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+      <div class="aktionen">
+        <a class="tel" href={`tel:${tel}`}>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          {einstellungen.telefon}
+        </a>
+        <a class="knopf" href={link(navigation.knopf.link)}>{navigation.knopf.titel}</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const knopf = document.querySelector<HTMLButtonElement>('.menu-knopf');
+  knopf?.addEventListener('click', () => {
+    const offen = knopf.getAttribute('aria-expanded') === 'true';
+    knopf.setAttribute('aria-expanded', String(!offen));
+    document.body.classList.toggle('menu-offen', !offen);
+  });
+</script>
+
+<style>
+  .kopf {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(255 255 255 / 92%);
+    backdrop-filter: saturate(1.4) blur(12px);
+    border-bottom: 1px solid var(--linie);
+  }
+  .leiste { display: flex; align-items: center; gap: 24px; min-height: 76px; }
+  .marke img { width: 172px; height: auto; }
+  .menu { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+  .menu > ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  .menu li { position: relative; }
+  .menu > ul > li > a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: var(--text);
+    font-weight: 550;
+    text-decoration: none;
+  }
+  .menu > ul > li > a:hover,
+  .menu > ul > li.aktiv > a { color: var(--akzent); background: var(--akzent-hell); }
+  .hat > a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-3px) rotate(45deg);
+    opacity: 0.6;
+  }
+  .unter {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 260px;
+    padding: 8px;
+    margin: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid var(--linie);
+    border-radius: 12px;
+    box-shadow: var(--schatten);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.15s, transform 0.15s, visibility 0.15s;
+  }
+  .hat:hover .unter,
+  .hat:focus-within .unter { opacity: 1; visibility: visible; transform: none; }
+  .unter a { display: block; padding: 9px 12px; border-radius: 8px; color: var(--text); text-decoration: none; }
+  .unter a:hover { background: var(--akzent-hell); color: var(--akzent); }
+  .aktionen { display: flex; align-items: center; gap: 16px; }
+  .tel { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .tel svg { color: var(--akzent); }
+  .aktionen .knopf { padding: 0.65em 1.15em; white-space: nowrap; }
+  .menu-knopf { display: none; }
+
+  @media (max-width: 1100px) {
+    .tel { display: none; }
+  }
+
+  @media (max-width: 920px) {
+    .leiste { min-height: 64px; }
+    .marke img { width: 140px; }
+    .menu-knopf {
+      display: grid;
+      place-items: center;
+      margin-left: auto;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--linie);
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+    }
+    .striche,
+    .striche::before,
+    .striche::after {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .striche { position: relative; }
+    .striche::before,
+    .striche::after { content: ''; position: absolute; left: 0; }
+    .striche::before { top: -6px; }
+    .striche::after { top: 6px; }
+    :global(.menu-offen) .striche { background: transparent; }
+    :global(.menu-offen) .striche::before { transform: translateY(6px) rotate(45deg); }
+    :global(.menu-offen) .striche::after { transform: translateY(-6px) rotate(-45deg); }
+
+    .menu {
+      display: none;
+      position: fixed;
+      inset: 64px 0 0 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 24px;
+      padding: 16px var(--rand) 32px;
+      background: #fff;
+      overflow-y: auto;
+    }
+    :global(.menu-offen) .menu { display: flex; }
+    :global(.menu-offen) { overflow: hidden; }
+    .menu > ul { flex-direction: column; }
+    .menu > ul > li > a { padding: 14px 4px; font-size: 1.15rem; border-bottom: 1px solid var(--linie); border-radius: 0; }
+    .menu > ul > li > a:hover,
+    .menu > ul > li.aktiv > a { background: none; }
+    .hat > a::after { display: none; }
+    .unter {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: 0;
+      padding: 4px 0 8px 12px;
+      min-width: 0;
+    }
+    .aktionen { flex-direction: column; align-items: stretch; }
+    .tel { display: inline-flex; justify-content: center; padding: 12px; }
+    .aktionen .knopf { justify-content: center; }
+  }
+</style>

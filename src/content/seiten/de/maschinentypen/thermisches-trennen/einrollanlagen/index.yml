@@ -1,0 +1,38 @@
+titel: Einrollanlagen
+oberzeile: Thermisches Trennen
+einleitung: Ein Fenster muss transparent, zu öffnen und schalldicht sein – und vor allem gut isolieren. Unsere Einrollanlagen schliessen die Verbundzone zuverlässig.
+bild: /uploads/typ-einrollanlage.webp
+kurz: Schliessen der Verbundzone – für alle Profile vom Fenster bis zur schweren Fassade.
+reihenfolge: 3
+bloecke:
+  - type: bildtext
+    titel: Konstante Temperaturen, gleichbleibendes Wohlbefinden
+    inhalt: |
+      Ein Fenster hat vielfältige Aufgaben zu erfüllen. Es muss transparent sein, um Sonnenlicht passieren zu lassen. Es muss sich öffnen und schliessen lassen, um eine Belüftung zu ermöglichen. Es muss schalldicht sein, damit der Lärm von der Strasse nicht ins Hausinnere gelangt. Doch ebenso wichtig ist es, dass ein Fenster möglichst gut isoliert.
+
+      Eine gleichbleibende Wohlfühlatmosphäre erreicht man nur durch konstante Temperaturen – ob es im Winter kalt oder im Sommer heiss ist.
+    bild: /uploads/einrollanlage-innen.webp
+    alt: Blick in eine Einrollanlage
+  - type: karten
+    hell: true
+    titel: Ausführungen
+    spalten: '3'
+    bildformat: quadrat
+    eintraege:
+      - titel: Typ BCplus
+        text: Für alle normalen Fenster- und Türprofile und leichtere Produktion. Gleiche Produktionsleistung wie die grösseren Einrollmaschinen, weniger geeignet für sehr grosse Profile.
+        bild: /uploads/ea-typ-bcplus.webp
+        alt: Einrollanlage Typ BCplus
+      - titel: Typ Standard
+        text: Für die verschiedenartigsten Profile geeignet, insbesondere für die Herstellung von schweren Fassadenprofilen sowie für den schweren Einsatz im Dauerbetrieb.
+        bild: /uploads/ea-typ-standard.webp
+        alt: Einrollanlage Typ Standard
+      - titel: Typ Advanced
+        text: Neu entwickelt für komplexere Profilgeometrien und kürzere Umrüstzeiten. Alle Verstellungen achsengesteuert, viele zusätzliche Verstellungen, untere und obere Einrollkraft einzeln mess- und einstellbar.
+        bild: /uploads/ea-typ-advanced.webp
+        alt: Einrollanlage Typ Advanced
+  - type: aufruf
+    titel: Die passende Einrollanlage finden
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

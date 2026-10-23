@@ -1,0 +1,19 @@
+titel: Kontakt
+oberzeile: Wir freuen uns auf Sie
+einleitung: Haben Sie Fragen zu unseren Maschinen oder planen Sie eine neue Anlage? Wir beantworten Ihre Anfrage so bald wie möglich.
+bloecke:
+  - type: kontakt
+    titel: So erreichen Sie uns
+    text: |
+      **Müller TB Technologies AG**
+      Laubisrütistrasse 72
+      CH-8712 Stäfa
+
+      Für Kunden in Asien, Europa und dem Mittleren Osten stehen Ihnen zudem unsere [weltweiten Vertretungen](/kontakt/vertretungen) zur Verfügung.
+
+      TODO: Kontaktformular – Umsetzung klären (Hosting, Empfänger-Adresse)
+  - type: aufruf
+    titel: Weltweit vor Ort
+    text: In Asien, Europa und dem Mittleren Osten sind wir direkt vertreten.
+    beschriftung: Vertretungen ansehen
+    link: /kontakt/vertretungen

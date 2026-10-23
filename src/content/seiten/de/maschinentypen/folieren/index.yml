@@ -1,0 +1,16 @@
+titel: Folieren
+oberzeile: Oberflächenschutz
+einleitung: Maschinen für das Applizieren von Schutzfolie auf den beschichteten Oberflächen von Profilen und Verbundprofilen.
+bild: /uploads/typ-foliermaschine.webp
+kurz: Automatisiertes Auftragen von Schutzfolie auf beschichtete Profiloberflächen.
+reihenfolge: 2
+bloecke:
+  - type: text
+    inhalt: Unsere Foliermaschinen wurden in den letzten Jahren weiterentwickelt und können so auch für viele andere Langgüter sowie andere Anwendungen verwendet werden – **einseitig** mit Pronus oder **mehrseitig** mit Curvatis.
+  - type: unterseiten
+    titel: Maschinen für das Folieren
+  - type: aufruf
+    titel: Ihre Profile zuverlässig schützen
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

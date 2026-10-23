@@ -1,0 +1,11 @@
+titel: Maschinentypen
+menutitel: Maschinen
+oberzeile: Maschinen und Anlagen
+einleitung: Rändeln, Montieren, Einrollen, Verschub testen, Folieren und die Montage von Bürsten und Dichtungen – modular aufgebaut und auf Ihre Produktion abgestimmt.
+bloecke:
+  - type: unterseiten
+  - type: aufruf
+    titel: Nicht das Passende dabei?
+    text: Wir entwickeln und bauen auch Sondermaschinen nach Ihren Anforderungen.
+    beschriftung: Anfrage stellen
+    link: /kontakt

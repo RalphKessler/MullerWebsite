@@ -1,0 +1,20 @@
+titel: Ablänganlagen
+oberzeile: Thermisches Trennen
+einleitung: Isolierstege – auch Thermal-Break-Strips oder Isolatoren genannt – mit einfacheren Geometrien werden oft auf Rollen verkauft und in der Produktion in der benötigten Länge und Stückzahl abgelängt.
+bild: /uploads/typ-ablaenganlage.webp
+kurz: Isolierstege ab Rolle in benötigter Länge und Stückzahl ablängen.
+reihenfolge: 8
+bloecke:
+  - type: bildtext
+    titel: Weniger Lager, mehr Flexibilität
+    inhalt: |
+      Die Verwendung von Isolierleisten auf Rollen umgeht das Lagern und Verwalten von verschiedenen Längen und reduziert somit den Lagerplatz.
+
+      Zudem ist man flexibler und kann schnell auf alle Leistenlängen zugreifen.
+    bild: /uploads/hero-ablaenganlage.webp
+    alt: Ablänganlage
+  - type: aufruf
+    titel: Interesse an einer Ablänganlage?
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

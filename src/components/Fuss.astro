@@ -1,0 +1,102 @@
+---
+import navigation from '../data/navigation.json';
+import einstellungen from '../data/einstellungen.json';
+import { link, zeile } from '../lib/hilfen';
+
+const tel = einstellungen.telefon.replace(/[^+\d]/g, '');
+const sozial = [
+  { name: 'Facebook', url: einstellungen.facebook },
+  { name: 'Instagram', url: einstellungen.instagram },
+  { name: 'YouTube', url: einstellungen.youtube },
+].filter((s) => s.url);
+---
+<footer class="fuss">
+  <div class="container raster">
+    <div class="firma">
+      <img src="/logo.svg" alt={einstellungen.kurzname} width="172" height="50" />
+      <p set:html={zeile(einstellungen.slogan)} />
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <address>
+        {einstellungen.firma}<br />
+        <span set:html={zeile(einstellungen.strasse)} /><br />
+        <span set:html={zeile(einstellungen.ort)} />
+      </address>
+      <p>
+        <a href={`tel:${tel}`}>{einstellungen.telefon}</a><br />
+        <a href={`mailto:${einstellungen.email}`}>{einstellungen.email}</a>
+      </p>
+    </div>
+    <div>
+      <h2>Maschinen</h2>
+      <ul>
+        {navigation.haupt[0].unterpunkte?.map((u) => <li><a href={link(u.link)}>{u.titel}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h2>Service</h2>
+      <ul>
+        <li><a href="/de/support/">Support</a></li>
+        <li><a href={einstellungen.ersatzteile} rel="noopener">Ersatzteil-Katalog</a></li>
+        <li><a href="/de/antworten/">Antworten (FAQ)</a></li>
+        <li><a href="/de/kontakt/vertretungen/">Weltweite Vertretungen</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container unten">
+    <span>© {new Date().getFullYear()} {einstellungen.firma} · Swiss Made</span>
+    <ul>
+      {navigation.fuss.filter((f) => !f.link.startsWith('http')).map((f) => <li><a href={link(f.link)}>{f.titel}</a></li>)}
+      {sozial.map((s) => <li><a href={s.url} rel="noopener">{s.name}</a></li>)}
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .fuss {
+    background: var(--dunkel);
+    color: #c5cfdb;
+    padding-top: clamp(48px, 7vw, 80px);
+    font-size: 0.95rem;
+  }
+  .raster {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+  .firma img {
+    width: 172px;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+  }
+  .firma p { max-width: 34ch; }
+  h2 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+  address { font-style: normal; margin-bottom: 1em; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin-bottom: 0.45em; }
+  a { color: #c5cfdb; text-decoration: none; }
+  a:hover { color: #fff; text-decoration: underline; }
+  .unten {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px 24px;
+    padding-block: 22px;
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    font-size: 0.85rem;
+  }
+  .unten ul { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+  .unten li { margin: 0; }
+
+  @media (max-width: 900px) {
+    .raster { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .firma { grid-column: 1 / -1; }
+  }
+  @media (max-width: 520px) {
+    .raster { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  }
+</style>

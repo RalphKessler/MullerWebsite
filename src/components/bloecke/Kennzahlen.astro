@@ -1,0 +1,35 @@
+---
+import { zeile } from '../../lib/hilfen';
+const { titel, eintraege } = Astro.props;
+---
+<div class="band">
+  <div class="container">
+    {titel && <h2 set:html={zeile(titel)} />}
+    <dl class="zahlen">
+      {eintraege.map((e: any) => (
+        <div>
+          <dt set:html={zeile(e.beschriftung)} />
+          <dd set:html={zeile(e.zahl)} />
+        </div>
+      ))}
+    </dl>
+  </div>
+</div>
+
+<style>
+  .band {
+    background: linear-gradient(120deg, var(--akzent-dunkel), var(--akzent));
+    color: #fff;
+    padding-block: clamp(48px, 7vw, 80px);
+  }
+  h2 { color: #fff; margin-bottom: 1.5em; }
+  .zahlen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 32px;
+    margin: 0;
+  }
+  .zahlen div { display: flex; flex-direction: column-reverse; border-left: 3px solid var(--rot); padding-left: 18px; }
+  dd { margin: 0; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 750; letter-spacing: -0.03em; line-height: 1.1; }
+  dt { color: rgb(255 255 255 / 80%); margin-top: 6px; }
+</style>

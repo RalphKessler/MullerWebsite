@@ -1,0 +1,37 @@
+titel: Support
+oberzeile: Service
+einleitung: Wir sind für Sie da – von der Beratung über die Inbetriebnahme bis zur Ersatzteilbeschaffung, auch nach vielen Jahren.
+bloecke:
+  - type: karten
+    spalten: '3'
+    eintraege:
+      - titel: Beratung und Entwicklungen
+        text: Als Ingenieurbüro entwickeln und bauen wir für Sie Sondermaschinen, die im Markt nicht oder nur in schlechter Qualität erhältlich sind.
+      - titel: Inbetriebnahmen
+        text: Alle Inbetriebnahmen werden durch unsere Techniker oder geschulte Techniker unserer Vertretungen durchgeführt. Mit Wissen aus erster Hand starten Sie Ihre Produktion problemlos ab dem ersten Tag.
+      - titel: Inspektionen
+        text: Wurde Ihre Maschine in letzter Zeit etwas vernachlässigt? In einem Kurzbesuch wird schnell ermittelt, welche Wartung oder Ersatzteile nötig sind, um sie für die Zukunft wieder fit zu machen.
+      - titel: Schulungen
+        text: Gut geschultes Personal erhöht die Produktivität Ihrer Anlage. Durch Personalwechsel verlorenes Know-how kann durch kurze Trainings oder Produktionsbegleitungen wieder erlangt werden – oft mit wertvollen Tipps und Tricks.
+      - titel: Maschinenwartungen
+        text: Durch regelmässige Wartung und Instandhaltung halten Sie Ihre Maschinen in Schwung und reduzieren Produktionsausfallzeiten auf ein Minimum.
+      - titel: Störungsbehebung
+        text: 90 % Ihrer Störungsfälle können wir direkt via Fernwartung sofort und unkompliziert beheben.
+  - type: bildtext
+    hell: true
+    oberzeile: Technischer Kundendienst
+    titel: Ersatzteile – auch für langjährige Maschinen
+    inhalt: |
+      Wir beschaffen Ihnen jegliche Ersatzteile für unsere Maschinen, auch wenn diese schon viele Jahre wertvolle Dienste geleistet haben.
+
+      Sie können Ersatzteile auch selbst in unserem **Online-Ersatzteilkatalog** suchen und bestellen. Bei Interesse erhalten Sie gerne Ihr persönliches Login zum Katalog, der genau Ihre Maschinen abbildet (Maschinen ab Baujahr 2002).
+    bild: /uploads/support.webp
+    alt: Ersatzteile
+    knopf: Zum Ersatzteilkatalog
+    link: https://parts.muller.ch/de/
+  - type: kontakt
+    titel: Supportkontakt
+    text: |
+      Rufen Sie unsere Supportlinie zu den Geschäftszeiten an oder schreiben Sie uns eine E-Mail mit der Maschinennummer und einer kurzen Beschreibung des Problems.
+
+      TODO: Support-Formular (bisher auf muller.ch/de/supportkontakt) – Umsetzung klären

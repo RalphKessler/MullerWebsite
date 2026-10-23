@@ -1,0 +1,45 @@
+titel: Firmenprofil
+menutitel: Unternehmen
+oberzeile: Über uns
+einleitung: Unser Erfolg liegt in der Zufriedenheit unserer Kunden.
+bloecke:
+  - type: bildtext
+    titel: Führender Hersteller von Isolierprofilmaschinen
+    inhalt: |
+      Wir betreuen unsere Kunden zielgerichtet, fachkompetent und professionell. Als führender Hersteller von Isolierprofilmaschinen engagieren wir uns weltweit als starker Partner, der mit innovativen und kreativen Lösungen die Kundenprodukte gewinnbringend unterstützt und fördert.
+
+      Durch die qualitativ hochstehenden Produkte sowie den erstklassigen Service haben wir das Vertrauen unserer Kunden gewonnen und bauen auf diesem Vertrauen eine gemeinsame Zukunft auf.
+    bild: /uploads/heute.webp
+    alt: Isolierprofilanlage
+  - type: bildtext
+    hell: true
+    umgekehrt: true
+    oberzeile: Heute
+    titel: Drei Bereiche, ein Anspruch
+    inhalt: |
+      Heute stellen wir Maschinen in drei Bereichen her: **Aluminium-Fensterbau, Folierungen und Bürstenmontagen**. Die Firma ist seit 13 Jahren in der Führung von Urs Müller und beschäftigt regelmässig 15 bis 20 Mitarbeitende.
+
+      Wir exportieren weltweit und sind branchenbekannt für beste Qualität im Maschinenbau, Neuentwicklungen, Anpassungen, Service und Support. Unsere Maschinen haben eine nahezu endlose Lebensdauer und sind einfach, wirtschaftlich und energiesparend entwickelt.
+    bild: /uploads/heute-2.webp
+    alt: Maschinenbau bei Müller
+  - type: karten
+    titel: Unsere Hauptprodukte im Fensterbau
+    spalten: '4'
+    eintraege:
+      - { titel: Rändelmaschinen, link: /maschinentypen/thermisches-trennen/randelmaschinen, linktext: Ansehen }
+      - { titel: Profilmontagen, link: /maschinentypen/thermisches-trennen/profilmontagen, linktext: Ansehen }
+      - { titel: Einrollanlagen, link: /maschinentypen/thermisches-trennen/einrollanlagen, linktext: Ansehen }
+      - { titel: Verschub-Prüfgeräte, link: /maschinentypen/thermisches-trennen/verschubpruefgeraete, linktext: Ansehen }
+      - { titel: Ablänganlagen, link: /maschinentypen/thermisches-trennen/ablaenganlagen, linktext: Ansehen }
+      - { titel: Foliermaschinen, link: /maschinentypen/folieren/foliermaschinen, linktext: Ansehen }
+      - { titel: Förderanlagen / Fördersysteme, link: /maschinentypen/folieren/foerdersysteme, linktext: Ansehen }
+      - { titel: Bürstenmontage, link: /maschinentypen/buersten-und-dichtungen/buerstenmontage-anlagen, linktext: Ansehen }
+      - { titel: Dichtungsmontage, link: /maschinentypen/buersten-und-dichtungen/dichtungsmontage-anlagen, linktext: Ansehen }
+      - { titel: Sondermaschinen, link: /maschinentypen/sondermaschinen, linktext: Ansehen }
+  - type: text
+    inhalt: 'TODO: Link zu den Allgemeinen Verkaufsbedingungen (PDF) ergänzen'
+  - type: aufruf
+    titel: Lernen Sie uns kennen
+    text: Wir freuen uns auf Ihre Anfrage.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

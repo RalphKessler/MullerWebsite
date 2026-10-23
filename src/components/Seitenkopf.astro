@@ -1,0 +1,62 @@
+---
+import { zeile } from '../lib/hilfen';
+
+interface Props {
+  titel: string;
+  oberzeile?: string;
+  einleitung?: string;
+  krumen: { titel: string; url: string }[];
+}
+const { titel, oberzeile, einleitung, krumen } = Astro.props;
+---
+<header class="seitenkopf">
+  <div class="container">
+    <nav aria-label="Brotkrumen" class="krumen">
+      <a href="/de/">Startseite</a>
+      {krumen.map((k) => (
+        <>
+          <span aria-hidden="true">/</span>
+          <a href={k.url}>{k.titel}</a>
+        </>
+      ))}
+    </nav>
+    {oberzeile && <span class="oberzeile" set:html={zeile(oberzeile)} />}
+    <h1>{titel}</h1>
+    {einleitung && <p class="lead" set:html={zeile(einleitung)} />}
+  </div>
+</header>
+
+<style>
+  .seitenkopf {
+    position: relative;
+    padding-block: clamp(40px, 7vw, 88px) clamp(36px, 5vw, 64px);
+    background:
+      radial-gradient(1200px 400px at 85% -10%, color-mix(in oklab, var(--akzent) 16%, transparent), transparent 70%),
+      linear-gradient(180deg, var(--flaeche-2), var(--flaeche));
+    border-bottom: 1px solid var(--linie);
+    overflow: hidden;
+  }
+  .seitenkopf::after {
+    content: '';
+    position: absolute;
+    right: -120px;
+    top: -120px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: 28px dashed color-mix(in oklab, var(--akzent) 12%, transparent);
+    pointer-events: none;
+  }
+  h1 { max-width: 22ch; margin-bottom: 0.35em; }
+  .lead { margin: 0; }
+  .krumen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    font-size: 0.88rem;
+    color: var(--text-leise);
+    margin-bottom: 1.6rem;
+  }
+  .krumen a { color: inherit; text-decoration: none; }
+  .krumen a:hover { color: var(--akzent); text-decoration: underline; }
+</style>

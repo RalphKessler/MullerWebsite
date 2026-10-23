@@ -1,0 +1,30 @@
+titel: Referenzen
+oberzeile: Unsere Kunden
+einleitung: Führende Profilhersteller und Systemhäuser auf der ganzen Welt produzieren mit Maschinen von Müller TB Technologies.
+bloecke:
+  - type: logos
+    eintraege:
+      - { name: Alas Aluminium, bild: /uploads/referenzen/alas.webp }
+      - { name: Alcoa, bild: /uploads/referenzen/alcoa.webp }
+      - { name: Aluprof, bild: /uploads/referenzen/aluprof.webp }
+      - { name: Blyweert, bild: /uploads/referenzen/blyweert.webp }
+      - { name: Cortizo, bild: /uploads/referenzen/cortizo.webp }
+      - { name: EFCO, bild: /uploads/referenzen/efco.webp }
+      - { name: Etna System, bild: /uploads/referenzen/etna_system.webp }
+      - { name: Extol, bild: /uploads/referenzen/extol.webp }
+      - { name: Hörmann, bild: /uploads/referenzen/hoermann.webp }
+      - { name: Hydro, bild: /uploads/referenzen/hydro.webp }
+      - { name: Kawneer, bild: /uploads/referenzen/kawneer_alcoa.webp }
+      - { name: Metra, bild: /uploads/referenzen/metra.webp }
+      - { name: Nanshan, bild: /uploads/referenzen/nanshan.webp }
+      - { name: Oldcastle, bild: /uploads/referenzen/oldcastle.webp }
+      - { name: Reynaers, bild: /uploads/referenzen/reynaers.webp }
+      - { name: Sapa, bild: /uploads/referenzen/sapa.webp }
+      - { name: Saray, bild: /uploads/referenzen/saray.webp }
+      - { name: Wicona, bild: /uploads/referenzen/wicona.webp }
+      - { name: Xingfa, bild: /uploads/referenzen/xingfa.webp }
+  - type: aufruf
+    titel: Werden Sie Teil dieser Liste
+    text: Erzählen Sie uns von Ihrem Projekt.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

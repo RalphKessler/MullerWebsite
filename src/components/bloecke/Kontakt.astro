@@ -1,0 +1,64 @@
+---
+import einstellungen from '../../data/einstellungen.json';
+import { markdown, zeile } from '../../lib/hilfen';
+const { titel, text } = Astro.props;
+const tel = einstellungen.telefon.replace(/[^+\d]/g, '');
+const karte = `https://www.openstreetmap.org/search?query=${encodeURIComponent(`${einstellungen.strasse}, ${einstellungen.ort}`)}`;
+---
+<div class="container raster">
+  <div>
+    {titel && <h2 set:html={zeile(titel)} />}
+    <div class="prosa" set:html={markdown(text)} />
+  </div>
+  <div class="karten">
+    <a class="karte" href={`tel:${tel}`}>
+      <span class="etikett">Telefon</span>
+      <strong>{einstellungen.telefon}</strong>
+      <span class="leise" set:html={zeile(einstellungen.oeffnungszeiten)} />
+    </a>
+    <a class="karte" href={`mailto:${einstellungen.email}`}>
+      <span class="etikett">E-Mail</span>
+      <strong>{einstellungen.email}</strong>
+      <span class="leise">Wir antworten so bald wie möglich.</span>
+    </a>
+    <a class="karte breit" href={karte} rel="noopener">
+      <span class="etikett">Adresse</span>
+      <strong>{einstellungen.firma}</strong>
+      <span><span set:html={zeile(einstellungen.strasse)} />, <span set:html={zeile(einstellungen.ort)} /></span>
+      <span class="leise">Auf der Karte anzeigen →</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .raster {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: clamp(32px, 6vw, 72px);
+    align-items: start;
+  }
+  .karten { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .karte {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid var(--linie);
+    border-radius: var(--radius);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .karte:hover { border-color: var(--akzent); box-shadow: var(--schatten); color: var(--text); }
+  .breit { grid-column: 1 / -1; }
+  .etikett { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--akzent); font-weight: 650; }
+  strong { font-size: 1.15rem; }
+  .leise { color: var(--text-leise); font-size: 0.92rem; }
+  @media (max-width: 820px) {
+    .raster { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .karten { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

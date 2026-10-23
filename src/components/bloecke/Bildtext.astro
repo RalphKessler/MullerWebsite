@@ -1,0 +1,41 @@
+---
+import { link, markdown, zeile } from '../../lib/hilfen';
+const { oberzeile, titel, inhalt, bild, alt, umgekehrt, knopf, link: ziel } = Astro.props;
+---
+<div class:list={['container', 'raster', { umgekehrt }]}>
+  <div class="text">
+    {oberzeile && <span class="oberzeile" set:html={zeile(oberzeile)} />}
+    {titel && <h2 set:html={zeile(titel)} />}
+    <div class="prosa" set:html={markdown(inhalt)} />
+    {knopf && ziel && <a class="knopf" href={link(ziel)}>{knopf}</a>}
+  </div>
+  {bild && (
+    <figure class="bild">
+      <img src={bild} alt={alt ?? ''} loading="lazy" decoding="async" />
+    </figure>
+  )}
+</div>
+
+<style>
+  .raster {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+  }
+  .umgekehrt .bild { order: -1; }
+  .bild {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--linie);
+    box-shadow: var(--schatten);
+  }
+  .bild img { width: 100%; max-height: 520px; object-fit: contain; }
+  .knopf { margin-top: 0.5rem; }
+  @media (max-width: 820px) {
+    .raster { grid-template-columns: minmax(0, 1fr); }
+    .umgekehrt .bild { order: 0; }
+  }
+</style>

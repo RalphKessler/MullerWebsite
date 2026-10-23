@@ -1,0 +1,27 @@
+titel: Antworten
+oberzeile: Häufige Fragen
+einleitung: Antworten auf Fragen, die uns Kundinnen und Kunden rund um das thermische Trennen immer wieder stellen.
+bloecke:
+  - type: faq
+    fragen:
+      - frage: Wie erreichen wir höhere Verschubwerte?
+        antwort: |
+          Die Verschubwerte werden von verschiedenen Faktoren beeinflusst. Zuerst muss die Form der Verbindungszone (Nut) korrekt sein. Im Verbindungsprozess spielt dann besonders die Qualität der Rändelung die wichtigste Rolle. Diese wiederum ist abhängig von der Qualität der Rändelräder sowie der korrekten Einstellung der Rändelmaschine.
+
+          Ebenfalls Einfluss hat die Einrollkraft. Hier muss das ideale Mittelmass gefunden werden: Eine zu kleine Einrollkraft reicht unter Umständen nicht aus, um den Hammer sauber zu schliessen. Eine zu grosse Kraft kann die Spitzen der Rändelung zerstören und somit einer Erhöhung der Verschubfestigkeit entgegenwirken.
+      - frage: Gibt es Profile, welche von der Form her nicht herzustellen sind?
+        antwort: |
+          Grundsätzlich gibt es keine Form von Profilen, welche auf unseren Maschinen nicht eingerollt werden kann. Es ist lediglich zu beachten, dass ausserhalb der Isolierleisten im Bereich des Hammers genügend Freiraum für das Hinreichen der Einrollscheiben gelassen wird. Für sehr komplexe Profile müssen allenfalls zusätzliche Werkzeuge beigezogen werden, um das Profil sauber durch die Maschinen zu führen.
+
+          Falls ein Profil so konstruiert werden soll, dass auch der Zugang zu den Isolierstegen verwendet werden kann, kann man auf das Einrollen von innen wechseln. Das Verbinden solcher Profile ist allerdings zeitaufwendig – eine dazu benötigte Maschine haben wir jedoch ebenfalls im Programm.
+      - frage: Wie können wir die Leistung der bestehenden Anlage erhöhen?
+        antwort: In den meisten Fällen wird die Leistung einer kompletten Isolieranlage durch äussere Einflüsse begrenzt. Zeitstudien zeigen, dass insbesondere das Zu- und Wegbringen des Materials oftmals sehr ungünstig gelöst ist. Häufig ist die Logistik nicht sauber gelöst, sodass das Bedienpersonal auf Material für den nächsten Auftrag warten muss.
+      - frage: Wie können wir die Qualität der Rändelung kontrollieren?
+        antwort: Zurzeit steht nur eine Möglichkeit zur Kontrolle der Rändelung zur Verfügung – die optische Kontrolle mit einer geeigneten Lupe, mit deren Hilfe die Form und die Tiefe der Verzahnung kontrolliert werden kann.
+      - frage: Wie gross darf die maximale Einrollkraft sein?
+        antwort: Eine generelle Begrenzung der Einrollkraft gibt es nicht; sie ist von der Profilform und der Wandstärke des Profils abhängig. Eine zu grosse Kraft kann das Profil irreversibel verformen. Zudem kann sie die Spitzen der Rändelung zerstören und somit einer Erhöhung der Verschubfestigkeit entgegenwirken.
+  - type: aufruf
+    titel: Ihre Frage ist nicht dabei?
+    text: Unsere Fachleute helfen Ihnen gerne weiter.
+    beschriftung: Frage stellen
+    link: /kontakt

@@ -1,0 +1,13 @@
+---
+// Zeigt die direkten Unterseiten der aktuellen Seite automatisch als Karten.
+import Karten from './Karten.astro';
+import { unterseiten, seitenUrl } from '../../lib/seiten';
+const { titel, einleitung, seite, seiten } = Astro.props;
+const eintraege = unterseiten(seiten, seite.id).map((s) => ({
+  titel: s.data.menutitel ?? s.data.titel,
+  text: s.data.kurz,
+  bild: s.data.bild,
+  link: seitenUrl(s.id),
+}));
+---
+{eintraege.length > 0 && <Karten titel={titel} einleitung={einleitung} spalten="3" bildformat="breit" eintraege={eintraege} />}

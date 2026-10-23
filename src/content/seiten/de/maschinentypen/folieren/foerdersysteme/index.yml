@@ -1,0 +1,26 @@
+titel: Fördersysteme
+oberzeile: Folieren
+einleitung: Automatisierte Transportbänder haben wesentlichen Einfluss auf die Gesamtleistung einer Anlage, da die Zeiten für das Manipulieren der Profile auf ein Minimum reduziert werden.
+bild: /uploads/typ-foerdersysteme.webp
+kurz: SPS-gesteuerte Transport- und Puffersysteme rund um die Foliermaschine.
+reihenfolge: 2
+bloecke:
+  - type: bildtext
+    titel: Halb- oder vollautomatisch zum nächsten Arbeitsplatz
+    inhalt: SPS-gesteuerte Transportsysteme bringen die Profile halb- oder vollautomatisch zum nächsten Bearbeitungsplatz oder puffern die Profile für die spätere Entnahme.
+    bild: /uploads/typ-foerdersysteme.webp
+    alt: Fördersystem
+  - type: karten
+    hell: true
+    titel: Ausführungen
+    spalten: '2'
+    eintraege:
+      - titel: Beschickungsförderer
+        text: Automatisiertes Fördersystem für das Beladen und Zubringen zur Foliermaschine. Die Profile werden automatisch gepuffert und vereinzelt. Sobald die Foliermaschine frei ist, wird das nächste Profil eingefördert.
+      - titel: Standard-Pufferförderer
+        text: Die folierten Profile werden automatisch entnommen und in den Puffer gefördert.
+  - type: aufruf
+    titel: Materialfluss optimieren?
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

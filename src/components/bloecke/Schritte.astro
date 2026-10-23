@@ -1,0 +1,45 @@
+---
+import { markdown, zeile } from '../../lib/hilfen';
+const { titel, einleitung, eintraege } = Astro.props;
+---
+<div class="container">
+  {(titel || einleitung) && (
+    <div class="abschnittskopf">
+      {titel && <h2 set:html={zeile(titel)} />}
+      {einleitung && <p set:html={zeile(einleitung)} />}
+    </div>
+  )}
+  <ol class="schritte">
+    {eintraege.map((e: any, i: number) => (
+      <li>
+        {e.bild && <img src={e.bild} alt="" loading="lazy" decoding="async" />}
+        <span class="nr">{String(i + 1).padStart(2, '0')}</span>
+        <h3 set:html={zeile(e.titel)} />
+        {e.text && <div class="text" set:html={markdown(e.text)} />}
+      </li>
+    ))}
+  </ol>
+</div>
+
+<style>
+  .schritte {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: clamp(16px, 2.5vw, 28px);
+    counter-reset: s;
+  }
+  li {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--linie);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  img { width: 100%; max-width: 220px; aspect-ratio: 1; object-fit: contain; margin: 0 auto 12px; }
+  .nr { display: block; font-weight: 750; color: var(--rot); letter-spacing: 0.05em; margin-bottom: 6px; }
+  .text { color: var(--text-leise); font-size: 0.97rem; }
+  .text :global(p:last-child) { margin-bottom: 0; }
+</style>

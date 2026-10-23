@@ -1,0 +1,32 @@
+{
+  "haupt": [
+    {
+      "titel": "Maschinen",
+      "link": "/maschinentypen",
+      "unterpunkte": [
+        { "titel": "Thermisches Trennen", "link": "/maschinentypen/thermisches-trennen" },
+        { "titel": "Folieren", "link": "/maschinentypen/folieren" },
+        { "titel": "Bürsten und Dichtungen", "link": "/maschinentypen/buersten-und-dichtungen" },
+        { "titel": "Sondermaschinen", "link": "/maschinentypen/sondermaschinen" }
+      ]
+    },
+    { "titel": "Support", "link": "/support" },
+    {
+      "titel": "Unternehmen",
+      "link": "/firmenprofil",
+      "unterpunkte": [
+        { "titel": "Firmenprofil", "link": "/firmenprofil" },
+        { "titel": "Referenzen", "link": "/referenzen" },
+        { "titel": "Antworten (FAQ)", "link": "/antworten" },
+        { "titel": "Weltweite Vertretungen", "link": "/kontakt/vertretungen" }
+      ]
+    },
+    { "titel": "Kontakt", "link": "/kontakt" }
+  ],
+  "knopf": { "titel": "Beratung anfragen", "link": "/kontakt" },
+  "fuss": [
+    { "titel": "Ersatzteil-Katalog", "link": "https://parts.muller.ch/de/" },
+    { "titel": "Impressum", "link": "/impressum" },
+    { "titel": "Datenschutz", "link": "/datenschutz" }
+  ]
+}

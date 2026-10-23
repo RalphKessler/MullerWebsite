@@ -1,0 +1,44 @@
+---
+import type { Baustein } from '../content.config';
+import type { Seite } from '../lib/seiten';
+import Hero from './bloecke/Hero.astro';
+import Text from './bloecke/Text.astro';
+import Bildtext from './bloecke/Bildtext.astro';
+import Karten from './bloecke/Karten.astro';
+import Unterseiten from './bloecke/Unterseiten.astro';
+import Kennzahlen from './bloecke/Kennzahlen.astro';
+import Schritte from './bloecke/Schritte.astro';
+import Faq from './bloecke/Faq.astro';
+import Logos from './bloecke/Logos.astro';
+import Aufruf from './bloecke/Aufruf.astro';
+import Kontakt from './bloecke/Kontakt.astro';
+
+const komponenten = {
+  hero: Hero,
+  text: Text,
+  bildtext: Bildtext,
+  karten: Karten,
+  unterseiten: Unterseiten,
+  kennzahlen: Kennzahlen,
+  schritte: Schritte,
+  faq: Faq,
+  logos: Logos,
+  aufruf: Aufruf,
+  kontakt: Kontakt,
+} as const;
+
+interface Props {
+  bloecke: Baustein[];
+  seite: Seite;
+  seiten: Seite[];
+}
+const { bloecke, seite, seiten } = Astro.props;
+---
+{bloecke.map((b) => {
+  const K = komponenten[b.type] as any;
+  return (
+    <section class:list={['baustein', `baustein-${b.type}`, { hell: b.hell }]}>
+      <K {...b} seite={seite} seiten={seiten} />
+    </section>
+  );
+})}

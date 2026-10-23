@@ -1,0 +1,27 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Bausteine from '../../components/Bausteine.astro';
+import Seitenkopf from '../../components/Seitenkopf.astro';
+import { alleSeiten, brotkrumen, type Seite } from '../../lib/seiten';
+
+export async function getStaticPaths() {
+  const seiten = await alleSeiten();
+  return seiten.map((seite) => {
+    const [lang, ...rest] = seite.id.split('/');
+    return { params: { lang, slug: rest.join('/') || undefined }, props: { seite, seiten } };
+  });
+}
+
+interface Props {
+  seite: Seite;
+  seiten: Seite[];
+}
+const { seite, seiten } = Astro.props;
+const { titel, beschreibung, oberzeile, einleitung, bloecke, kopf_ausblenden } = seite.data;
+---
+<Basis titel={titel} beschreibung={beschreibung ?? einleitung}>
+  {!kopf_ausblenden && (
+    <Seitenkopf titel={titel} oberzeile={oberzeile} einleitung={einleitung} krumen={brotkrumen(seiten, seite.id)} />
+  )}
+  <Bausteine bloecke={bloecke} seite={seite} seiten={seiten} />
+</Basis>

@@ -1,0 +1,26 @@
+titel: Verschub-Prüfgeräte
+oberzeile: Thermisches Trennen
+einleitung: Eine der wichtigsten Qualitätskontrollen an Verbundprofilen ist die Prüfung der Verschubfestigkeit.
+bild: /uploads/typ-verschubpruefgeraet.webp
+kurz: Prüfung der Verschubfestigkeit – vom Schnelltester bis zur Messung nach EN 14024.
+reihenfolge: 4
+bloecke:
+  - type: text
+    inhalt: Die einfacheren Geräte werden in der Produktion für das regelmässige Prüfen verwendet. Die Geräte können mit verschiedenen Optionen wie Datenlogger, geregeltem Verschubantrieb oder Parallelklemmung ausgebaut werden.
+  - type: karten
+    hell: true
+    titel: Ausführungen
+    spalten: '2'
+    bildformat: quadrat
+    eintraege:
+      - titel: Typ S Schnelltester
+        text: Geeignet für die regelmässige Kontrolle der Verschubkraft während der Produktion.
+      - titel: Typ MBC300
+        text: Das Gerät für höhere Ansprüche an den Prüfprozess. Der Antrieb mit geregelter Verschubgeschwindigkeit erlaubt Messungen gemäss der Norm **EN 14024 (Version 2024)**. Erweiterbar mit Datenlogger, Querabschuboption (Q-Test) oder Parallelklemmung.
+        bild: /uploads/pg-typ-mbc300.webp
+        alt: Verschub-Prüfgerät MBC300
+  - type: aufruf
+    titel: Prüfprozess optimieren?
+    text: Wir verraten Ihnen gerne mehr Details.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

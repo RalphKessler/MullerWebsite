@@ -1,0 +1,8 @@
+---
+import { markdown, zeile } from '../../lib/hilfen';
+const { titel, inhalt } = Astro.props;
+---
+<div class="container prosa">
+  {titel && <h2 set:html={zeile(titel)} />}
+  <div set:html={markdown(inhalt)} />
+</div>

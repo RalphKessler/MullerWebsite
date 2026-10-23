@@ -1,0 +1,95 @@
+titel: Müller TB Technologies AG
+beschreibung: Maschinen und Anlagen für die Herstellung wärmegedämmter Aluminium-Fensterprofile – Rändeln, Montieren, Einrollen, Folieren, Bürsten- und Dichtungsmontage. Swiss Made aus Stäfa.
+kopf_ausblenden: true
+bloecke:
+  - type: hero
+    oberzeile: Isolierprofilmaschinen · Swiss Made
+    titel: Massgeschneiderte Lösungen für Ihre Aluminium-Fensterprofile
+    text: Von einzelnen Maschinen bis zur kompletten Fertigungslinie entwickeln wir gemeinsam mit Ihnen die passende Lösung für eine wirtschaftliche und zuverlässige Produktion.
+    bild: /uploads/ea-typ-advanced.webp
+    alt: Einrollanlage Typ Advanced
+    knopf: Maschinen entdecken
+    link: /maschinentypen
+    knopf2: Beratung anfragen
+    link2: /kontakt
+  - type: karten
+    titel: Unsere Maschinenlösungen meistern folgende Bereiche
+    einleitung: Individuelle und effiziente Lösungen für die Herstellung von wärmegedämmten Aluminium-Fensterprofilen – exakt abgestimmt auf Ihre Anforderungen.
+    spalten: '3'
+    bildformat: breit
+    eintraege:
+      - titel: Thermisches Trennen von Aluminiumprofilen
+        text: Automatisiertes Verbinden thermisch getrennter Aluminiumprofile (Thermal Break).
+        bild: /uploads/typ-raendelmaschine.webp
+        alt: Rändelmaschine
+        link: /maschinentypen/thermisches-trennen
+      - titel: Folieren von Oberflächen
+        text: Automatisiertes Auftragen von Schutzfolie auf die Oberflächen der beschichteten Profile.
+        bild: /uploads/typ-foliermaschine.webp
+        alt: Foliermaschine
+        link: /maschinentypen/folieren
+      - titel: Montieren von Bürsten und Dichtungen
+        text: Automatisierte Montage von Bürsten und Dichtungen in verschiedensten Aluminiumprofilen.
+        bild: /uploads/typ-buerstenmontage.webp
+        alt: Bürstenmontage-Anlage
+        link: /maschinentypen/buersten-und-dichtungen
+  - type: kennzahlen
+    eintraege:
+      - zahl: '1979'
+        beschriftung: Markteinführung der ersten Rändelmaschine
+      - zahl: bis 180
+        beschriftung: Profile pro Stunde mit einer vollautomatischen Anlage
+      - zahl: 90 %
+        beschriftung: der Störungsfälle direkt per Fernwartung behoben
+      - zahl: 15–20
+        beschriftung: Mitarbeitende, weltweiter Export
+  - type: schritte
+    titel: Kombiniertes Rändeln/Montage-System
+    einleitung: Zum Erreichen einer höheren Effizienz haben wir ein Verfahren entwickelt, in welchem Rändeln und Montieren in einem Arbeitsgang kombiniert werden.
+    eintraege:
+      - titel: Kombiniertes Rändeln und Montieren
+        bild: /uploads/schritt-kombiniert.webp
+      - titel: Profile einrollen
+        bild: /uploads/schritt-einrollen.webp
+      - titel: Verschub testen
+        bild: /uploads/schritt-verschub.webp
+  - type: bildtext
+    hell: true
+    oberzeile: Sondermaschinen
+    titel: Wenn es die Maschine noch nicht gibt, bauen wir sie.
+    inhalt: |
+      Die Entwicklung und Fertigung von Sondermaschinen sind für uns sehr bedeutungsvoll. Meist sind es Wünsche von Kunden, die wir erfolgreich realisieren.
+
+      Durch den Einsatz von standardisierten Teilen erreichen wir Lösungen, die wirtschaftlich sinnvoll sind.
+    bild: /uploads/heute.webp
+    alt: Isolierprofilanlage in der Produktion
+    knopf: Realisierte Sondermaschinen
+    link: /maschinentypen/sondermaschinen
+  - type: bildtext
+    hell: true
+    umgekehrt: true
+    oberzeile: Support
+    titel: Wir sind für Sie da – ein Maschinenleben lang.
+    inhalt: |
+      Inbetriebnahme, Schulung, Wartung und Ersatzteile aus einer Hand. Unsere Maschinen haben eine nahezu endlose Lebensdauer – wir beschaffen Ersatzteile auch für Anlagen, die schon viele Jahre im Einsatz sind.
+    bild: /uploads/support.webp
+    alt: Ersatzteile für Müller-Maschinen
+    knopf: Zum Support
+    link: /support
+  - type: logos
+    titel: Weltweit im Einsatz
+    text: Führende Profilhersteller und Systemhäuser vertrauen auf unsere Maschinen.
+    eintraege:
+      - { name: Hydro, bild: /uploads/referenzen/hydro.webp }
+      - { name: Reynaers, bild: /uploads/referenzen/reynaers.webp }
+      - { name: Aluprof, bild: /uploads/referenzen/aluprof.webp }
+      - { name: Hörmann, bild: /uploads/referenzen/hoermann.webp }
+      - { name: Wicona, bild: /uploads/referenzen/wicona.webp }
+      - { name: Kawneer, bild: /uploads/referenzen/kawneer_alcoa.webp }
+      - { name: Cortizo, bild: /uploads/referenzen/cortizo.webp }
+      - { name: Sapa, bild: /uploads/referenzen/sapa.webp }
+  - type: aufruf
+    titel: Planen Sie eine neue Anlage?
+    text: Von der einzelnen Maschine bis zur kompletten Fertigungslinie – sprechen Sie mit unseren Fachleuten.
+    beschriftung: Jetzt unverbindlich beraten lassen
+    link: /kontakt

@@ -1,0 +1,57 @@
+titel: Weltweite Vertretungen
+oberzeile: Kontakt
+einleitung: In folgenden Regionen sind wir direkt vertreten.
+bloecke:
+  - type: karten
+    titel: Asien
+    spalten: '3'
+    eintraege:
+      - titel: Aluminum Machines Equipment – Pressta Pte Ltd
+        text: |
+          6 Temasek Boulevard, #28-07, Suntec Tower Four
+          Singapore (038986)
+
+          Tel. [+65 6272 0110](tel:+6562720110)
+          [ame-pressta.com](https://ame-pressta.com)
+      - titel: Ame Pressta (Suzhou) Machinery & Equipment Co., Ltd
+        text: |
+          283 QingQiu Street, Modern Avenue East SIP Suzhou City
+          Jiangsu Province, China (215024)
+
+          Tel. [+86 512 6283 8766](tel:+8651262838766)
+          [ame-pressta.com](https://ame-pressta.com)
+      - titel: LGF Sysmac India Pvt Ltd
+        text: |
+          Mr. Deepak Chugh
+          402-403, Tower C, NDM-2, Netaji Subhash Place
+          New Delhi – 110034, India
+
+          Tel. [+91 11 473 488 88](tel:+911147348888)
+          [info@lgfsysmac.com](mailto:info@lgfsysmac.com) · [lgfsysmac.com](https://www.lgfsysmac.com)
+  - type: karten
+    titel: Europa
+    spalten: '3'
+    eintraege:
+      - titel: MARRIN MAKINA Aluminyum San. ve Dış Tic. Ltd. Şti.
+        text: |
+          Kavacık Mah. Yayabeyi Sk. No:34/1
+          34810 Beykoz Istanbul, Türkei
+
+          Tel. [+90 216 404 10 10](tel:+902164041010)
+          [umit@marrinmakina.com](mailto:umit@marrinmakina.com) · [marrinmakina.com](https://www.marrinmakina.com)
+  - type: karten
+    titel: Mittlerer Osten und Nordamerika
+    spalten: '3'
+    eintraege:
+      - titel: Alteam FZE
+        text: |
+          Mr. Hovig Karayan
+          PO Box 213160, AE-Dubai
+
+          Tel. [+971 4 441 9785](tel:+97144419785)
+          [info@alteamfze.com](mailto:info@alteamfze.com)
+      - titel: USA und Kanada
+        text: |
+          Direkt über unseren Hauptsitz in Stäfa:
+
+          [sales@muller.ch](mailto:sales@muller.ch)

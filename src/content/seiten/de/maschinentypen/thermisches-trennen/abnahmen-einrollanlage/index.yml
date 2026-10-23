@@ -1,0 +1,18 @@
+titel: Abnahmen Einrollanlage
+oberzeile: Fördertechnik
+einleitung: Diese Förderer optimieren den automatischen Transport der eingerollten Profile von der Einrollmaschine in einen Puffer – optional direkt weiter zur Verpackungsmaschine.
+bild: /uploads/typ-abnahme-ea.webp
+kurz: Transport der eingerollten Profile in den Puffer oder zur Verpackung.
+reihenfolge: 7
+bloecke:
+  - type: karten
+    titel: Ausführung
+    spalten: '2'
+    eintraege:
+      - titel: Standardförderer Einrollanlage
+        text: Standardisiertes Fördersystem mit automatischer Höhenverstellung der Rollenbahn.
+  - type: aufruf
+    titel: Materialfluss optimieren?
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

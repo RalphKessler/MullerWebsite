@@ -1,0 +1,43 @@
+---
+import { link, zeile } from '../../lib/hilfen';
+const { titel, text, beschriftung, link: ziel } = Astro.props;
+---
+<div class="container">
+  <div class="aufruf">
+    <div>
+      <h2 set:html={zeile(titel)} />
+      {text && <p set:html={zeile(text)} />}
+    </div>
+    <a class="knopf" href={link(ziel)}>{beschriftung} <span aria-hidden="true">→</span></a>
+  </div>
+</div>
+
+<style>
+  .aufruf {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px 48px;
+    padding: clamp(32px, 5vw, 56px);
+    border-radius: calc(var(--radius) * 1.5);
+    background: var(--dunkel);
+    color: #fff;
+  }
+  .aufruf::after {
+    content: '';
+    position: absolute;
+    right: -80px;
+    bottom: -120px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 26px dashed rgb(255 255 255 / 7%);
+  }
+  h2 { color: #fff; margin-bottom: 0.3em; }
+  p { color: #c5cfdb; margin: 0; max-width: 56ch; }
+  .knopf { position: relative; z-index: 1; background: #fff; color: var(--akzent-dunkel); border-color: #fff; }
+  .knopf:hover { background: var(--akzent-hell); border-color: var(--akzent-hell); color: var(--akzent-dunkel); }
+</style>

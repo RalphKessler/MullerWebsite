@@ -1,0 +1,19 @@
+titel: Bürsten und Dichtungen
+oberzeile: Montage
+einleitung: Das maschinelle Eindrücken von Dichtungen in Fenster- und Türprofile oder das Einziehen von Bürsten in Schienen für den Sonnenschutz erhöht die Effizienz dieses Arbeitsschrittes.
+bild: /uploads/typ-buerstenmontage.webp
+kurz: Automatisierte Montage von Bürsten und Dichtungen in verschiedensten Aluminiumprofilen.
+reihenfolge: 3
+bloecke:
+  - type: text
+    inhalt: |
+      Mehr und mehr werden Dichtungen bereits im Voraus in die Aluminiumprofile eingebracht, wodurch sich die Produktionszeiten bei der Fenstermontage reduzieren.
+
+      Wir bieten unterschiedliche Montagemethoden: das **Einziehen** von Bürsten oder Dichtungen und das **Eindrücken** von Dichtungen.
+  - type: unterseiten
+    titel: Anlagen für Bürsten und Dichtungen
+  - type: aufruf
+    titel: Montage automatisieren?
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

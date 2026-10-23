@@ -1,0 +1,73 @@
+titel: Sondermaschinen
+oberzeile: Entwicklung nach Mass
+einleitung: Meist sind es Wünsche von Kunden, die wir erfolgreich realisieren. Durch den Einsatz von standardisierten Teilen erreichen wir Lösungen, die wirtschaftlich sinnvoll sind.
+bild: /uploads/sm-schaeumanlage.webp
+kurz: Maschinen, Vorrichtungen und Einrichtungen nach Kundenwunsch – eine Auswahl.
+reihenfolge: 4
+bloecke:
+  - type: karten
+    titel: Eine kleine Auswahl realisierter Sondermaschinen
+    spalten: '3'
+    bildformat: frei
+    eintraege:
+      - titel: Automatische Profil-Abstapelhilfe
+        text: Ergonomisches und besonders platzsparendes Verpacken der Profile in die Gestelle. Halbautomatisch, Bedienung durch nur eine Person; Profile pro Lage und Anzahl Lagen über das HMI einstellbar.
+        bild: /uploads/sm-abstapelhilfe.webp
+        alt: Profil-Abstapelhilfe
+      - titel: Sondersäge «falsche Gehrung»
+        text: Säge mit vier Aggregaten für den schnellen und genauen Schnitt an Fensterprofilen – erforderlich bei der Verbindung von ungleich breiten Profilen.
+        bild: /uploads/sm-saege-gehrung.webp
+        alt: Sondersäge falsche Gehrung
+      - titel: Spider-Einschub
+        text: Automatischer Einschub von Schaumstoffprofilen in die Kammern von Verbundprofilen zur Reduzierung der K-Werte.
+        bild: /uploads/sm-spider-einschub.webp
+        alt: Spider-Einschub
+      - titel: Inneneinrollanlage
+        text: Das Schliessen der Verbundzone von der Innenseite erhöht die Freiheit in der Profilgestaltung – mit höherem Aufwand und Werkzeugkosten als das Standardverfahren.
+        bild: /uploads/sm-inneneinrollanlage.webp
+        alt: Inneneinrollanlage
+      - titel: 4-fach-Folierung für Packbandrollen
+        text: Verhindert das ungewollte Abrutschen der Bänder beim Transport. Vier Folierstationen für unterschiedliche Folienbreiten und Wickelrichtungen.
+        bild: /uploads/sm-4fach-folierung.webp
+        alt: 4-fach-Folierung
+      - titel: Kartonecken-Faltmaschine
+        text: Vorgestanzte Schutzecken aus Wellkarton für fertige Fensterrahmen werden vollautomatisch gefaltet.
+        bild: /uploads/sm-kartonecken.webp
+        alt: Kartonecken-Faltmaschine
+      - titel: Klimagerät für Langzeitprüfung nach EN 14024
+        text: Alterungstests mit thermischem Zyklus zwischen −20 °C und 80 °C bei gleichzeitiger zyklischer Zugbelastung.
+        bild: /uploads/sm-klimageraet.webp
+        alt: Klimagerät für Langzeitprüfung
+      - titel: Umbau einer Gehrungssäge
+        text: Standardmaschine mit diversen Zusatzeinrichtungen und Sonderfunktionen für eine Sonderanwendung.
+        bild: /uploads/sm-gehrungssaege.webp
+        alt: Umgebaute Gehrungssäge
+      - titel: Transportband
+        text: Lebensmitteltaugliches Transportband in V2A-Stahl.
+        bild: /uploads/sm-transportband.webp
+        alt: Transportband
+      - titel: Schäumanlage
+        text: Einbringen von PU-Schaum in unterschiedlich grosse Kammern von langen Fenster- und Türprofilen.
+        bild: /uploads/sm-schaeumanlage.webp
+        alt: Schäumanlage
+      - titel: Dichtungsmontage mit integrierter Kappsäge
+        text: Automatische Montage von drei Dichtungen in Fensterprofilen und gleichzeitige Kappung der Enden.
+        bild: /uploads/sm-dichtungsmontage.webp
+        alt: Dichtungsmontage-Anlage mit Kappsäge
+      - titel: Sonder-Rändelmaschine
+        text: Ein kleines Adapterprofil aus Aluminium wird an verschiedenen Stellen gerändelt – mit hoher Präzision bei Rändeltiefe und Profilgeradheit.
+        bild: /uploads/sm-raendelmaschine.webp
+        alt: Sonder-Rändelmaschine
+      - titel: Nagelanlage
+        text: Automatisches Nageln von Holzwänden für Verpackungen; die Nagelpositionen werden über ein XY-Portal angesteuert.
+        bild: /uploads/sm-nagelanlage.webp
+        alt: Nagelanlage
+      - titel: Nutenfräse für PVC-Fensterprofile
+        text: Einfräsen einer Nut in PVC-Fensterprofile und nachträgliche Montage einer V2A-Abdeckung.
+        bild: /uploads/sm-nutenfraese.webp
+        alt: Nutenfräse
+  - type: aufruf
+    titel: Haben Sie eine besondere Aufgabe?
+    text: Als Ingenieurbüro entwickeln und bauen wir Maschinen, die im Markt nicht oder nur in schlechter Qualität erhältlich sind.
+    beschriftung: Projekt besprechen
+    link: /kontakt

@@ -1,0 +1,43 @@
+titel: Thermisches Trennen
+oberzeile: Thermal Break
+einleitung: Automatisiertes Verbinden thermisch getrennter Aluminiumprofile – Rändeln, Montieren, Einrollen und Verschub testen.
+bild: /uploads/typ-raendelmaschine.webp
+kurz: Automatisiertes Verbinden thermisch getrennter Aluminiumprofile (Thermal Break).
+reihenfolge: 1
+bloecke:
+  - type: schritte
+    titel: Kombiniertes Rändeln/Montage-System
+    einleitung: Zum Erreichen einer höheren Effizienz haben wir ein Verfahren entwickelt, in welchem Rändeln und Montieren in einem Arbeitsgang kombiniert werden.
+    eintraege:
+      - titel: Kombiniertes Rändeln und Montieren
+        bild: /uploads/schritt-kombiniert.webp
+      - titel: Profile einrollen
+        bild: /uploads/schritt-einrollen.webp
+      - titel: Verschub testen
+        bild: /uploads/schritt-verschub.webp
+  - type: karten
+    hell: true
+    titel: Standard-Layouts
+    einleitung: Es stehen verschiedene Standard-Layouts zur Verfügung, die sich in Funktionalität und Produktionsleistung unterscheiden. Dank dem modularen Aufbau lassen sich die Anlagen leicht an kundenspezifische Gegebenheiten anpassen.
+    spalten: '3'
+    bildformat: breit
+    eintraege:
+      - titel: Kleine Anlage
+        text: Einfache Anlage, bis zu **30 Profile pro Stunde**.
+        bild: /uploads/layout-klein.webp
+        alt: Layout einer einfachen Anlage
+      - titel: Mittlere Anlage
+        text: Halbautomatische Anlage, bis zu **70 Profile pro Stunde**.
+        bild: /uploads/layout-mittel.webp
+        alt: Layout einer halbautomatischen Anlage
+      - titel: Grosse Anlage
+        text: Vollautomatische Anlage, bis zu **180 Profile pro Stunde**.
+        bild: /uploads/layout-gross.webp
+        alt: Layout einer vollautomatischen Anlage
+  - type: unterseiten
+    titel: Maschinen für das thermische Trennen
+  - type: aufruf
+    titel: Welches Layout passt zu Ihrer Produktion?
+    text: Wir beraten Sie gerne – von der Einzelmaschine bis zur vollautomatischen Linie.
+    beschriftung: Beratung anfragen
+    link: /kontakt

@@ -1,0 +1,47 @@
+titel: Bürstenmontage-Anlagen
+oberzeile: Bürsten und Dichtungen
+einleitung: Effizientes Einziehen von Bürsten in Rollladenprofile und ähnliche Profile – bis zu 400 % schneller.
+bild: /uploads/typ-buerstenmontage.webp
+kurz: Einziehen von Bürsten in Rollladen- und ähnliche Profile, halb- oder vollautomatisch.
+reihenfolge: 1
+bloecke:
+  - type: kennzahlen
+    eintraege:
+      - zahl: bis 400 %
+        beschriftung: höhere Produktionsgeschwindigkeit
+      - zahl: ca. 100
+        beschriftung: Bürsten/Profile pro Stunde (automatisch)
+      - zahl: ca. 50
+        beschriftung: Bürsten/Profile pro Stunde (halbautomatisch)
+  - type: schritte
+    titel: So funktioniert die Bürstenmontage
+    eintraege:
+      - titel: Beschicken
+        text: Die Profile werden von Hand oder mithilfe einer Hebehilfe auf das Beschickungsband gelegt, dort gepuffert und für das Einziehen bereitgestellt.
+      - titel: Einfädeln
+        text: Erreicht ein Profil die Einfädel-Station, wird automatisch eine Bürste in die untere Nut des Profils geschoben.
+      - titel: Einziehen und messen
+        text: Eine weitere Einheit zieht die Bürste komplett durch das Profil und schneidet sie ab. Die Länge wird gemessen – so ist sichergestellt, dass die Bürste über die ganze Profillänge eingezogen ist.
+      - titel: Zweite Bürste
+        text: Das Band taktet eine Profileinheit weiter; in einer zweiten Station wird die obere Bürste eingezogen. Beide Stationen arbeiten zeitgleich, aber unabhängig voneinander.
+      - titel: Walzen und folieren
+        text: Das Profil wird durch die Walzstation geschoben. Optional wird gleichzeitig auf der Unter- und Oberseite eine Schutzfolie aufgetragen.
+  - type: karten
+    hell: true
+    titel: Ausführungen
+    spalten: '2'
+    bildformat: quadrat
+    eintraege:
+      - titel: Bürstenmontage-Anlage halbautomatisch
+        text: Montiert pro Stunde ca. 50 Bürsten/Profile.
+        bild: /uploads/bm-halbautomatisch.webp
+        alt: Bürstenmontage-Anlage halbautomatisch
+      - titel: Bürstenmontage-Anlage automatisch
+        text: Montiert pro Stunde ca. 100 Bürsten/Profile.
+        bild: /uploads/bm-automatisch.webp
+        alt: Bürstenmontage-Anlage automatisch
+  - type: aufruf
+    titel: Jetzt unverbindlich beraten lassen
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

@@ -1,0 +1,51 @@
+---
+import { markdown, zeile } from '../../lib/hilfen';
+const { titel, fragen } = Astro.props;
+---
+<div class="container eng">
+  {titel && <h2 set:html={zeile(titel)} />}
+  <div class="liste">
+    {fragen.map((f: any) => (
+      <details>
+        <summary set:html={zeile(f.frage)} />
+        <div class="antwort prosa" set:html={markdown(f.antwort)} />
+      </details>
+    ))}
+  </div>
+</div>
+
+<style>
+  .eng { max-width: 860px; }
+  h2 { margin-bottom: 1em; }
+  .liste { border-top: 1px solid var(--linie); }
+  details { border-bottom: 1px solid var(--linie); }
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 4px;
+    font-weight: 650;
+    font-size: 1.08rem;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--akzent-hell);
+    color: var(--akzent);
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: transform 0.2s;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  summary:hover { color: var(--akzent); }
+  .antwort { padding: 0 4px 20px; color: var(--text-leise); }
+</style>

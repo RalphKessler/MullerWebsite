@@ -1,0 +1,26 @@
+titel: Profilmontagen
+oberzeile: Thermisches Trennen
+einleitung: Mit den Profilmontagen, auch «Stegeinschub» genannt, werden die Isolierleisten in die Profile geschoben.
+bild: /uploads/typ-profilmontage.webp
+kurz: Stegeinschub – die Isolierleisten werden in die Profile geschoben.
+reihenfolge: 2
+bloecke:
+  - type: bildtext
+    titel: Mehr als nur Stegeinschub
+    inhalt: Die Maschinen umfassen neben dem Stegeinschub auch Montagetische mit automatisierten Gegenanschlägen, Zu- und Abführsysteme für die Profile und auch Leistenmagazine.
+    bild: /uploads/typ-profilmontage.webp
+    alt: Profilmontage
+  - type: karten
+    hell: true
+    titel: Ausführungen
+    spalten: '2'
+    eintraege:
+      - titel: Typ PM-TQ100
+        text: Geeignet für den Einsatz in einer klassischen Produktionslinie für kleine bis mittelgrosse Mengen.
+      - titel: Typ TQ-100 mit horizontalem Leistenmagazin
+        text: Benötigt in einer vollautomatischen Anlage nach der klassischen Montagemethode, üblicherweise in Kombination mit einem Profilmontage-Roboter.
+  - type: aufruf
+    titel: Fragen zur Profilmontage?
+    text: Wir verraten Ihnen gerne mehr.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt

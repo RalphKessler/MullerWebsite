@@ -1,0 +1,271 @@
+# Prüfung und Autovervollständigung im Editor (z. B. VS Code mit YAML-Erweiterung):
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms@0.250.2/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: RalphKessler/MullerWebsite
+  branch: main
+  # base_url: https://sveltia-cms-auth.<konto>.workers.dev   # erst für den GitHub-Login (siehe README)
+  commit_messages:
+    create: 'Neu: {{collection}} «{{slug}}»'
+    update: 'Geändert: {{collection}} «{{slug}}»'
+    delete: 'Gelöscht: {{collection}} «{{slug}}»'
+    uploadMedia: 'Hochgeladen: «{{path}}»'
+    deleteMedia: 'Gelöscht: «{{path}}»'
+
+site_url: https://demo.muller.ch
+logo: { src: /logo.svg }
+media_folder: public/uploads
+public_folder: /uploads
+slug: { encoding: ascii, clean_accents: true }
+
+collections:
+  - name: seiten
+    label: Seiten
+    label_singular: Seite
+    description: 'Alle Seiten der Website. Die Ordnerstruktur ergibt die Adresse (URL). Platzhalter als «TODO: …» erfassen – sie werden im Test gelb markiert und live ausgeblendet.'
+    folder: src/content/seiten/de
+    extension: yml
+    format: yml
+    create: true
+    identifier_field: titel
+    nested: { depth: 5, summary: '{{titel}}' }
+    meta: { path: { widget: string, label: 'Adresse (Pfad)', index_file: index } }
+    summary: '{{titel}}'
+    sortable_fields: [titel, reihenfolge]
+    fields:
+      - { name: titel, label: Titel, widget: string }
+      - { name: menutitel, label: 'Kurztitel (Brotkrumen, Karten)', widget: string, required: false }
+      - { name: beschreibung, label: 'Kurzbeschreibung für Google (max. 160 Zeichen)', widget: text, required: false }
+      - { name: oberzeile, label: 'Oberzeile (kleiner Text über dem Titel)', widget: string, required: false }
+      - { name: einleitung, label: Einleitung, widget: text, required: false }
+      - { name: bild, label: 'Vorschaubild (für Übersichtskarten)', widget: image, required: false }
+      - { name: kurz, label: 'Kurztext (für Übersichtskarten)', widget: text, required: false }
+      - { name: reihenfolge, label: 'Reihenfolge in Übersichten', widget: number, value_type: int, required: false, default: 100 }
+      - { name: kopf_ausblenden, label: 'Seitenkopf ausblenden (nur Startseite)', widget: boolean, required: false }
+      - { name: entwurf, label: 'Entwurf (nicht veröffentlichen)', widget: boolean, required: false }
+      - name: bloecke
+        label: Inhalt
+        label_singular: Baustein
+        widget: list
+        required: false
+        types:
+          - label: Einstieg (Hero)
+            name: hero
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              # &hell und &linkhinweis werden in den weiteren Bausteinen wiederverwendet
+              - &hell { name: hell, label: 'Grauer Hintergrund', widget: boolean, required: false }
+              - { name: oberzeile, label: Oberzeile, widget: string, required: false }
+              - { name: titel, label: Titel, widget: string }
+              - { name: text, label: Text, widget: text, required: false }
+              - { name: bild, label: 'Bild (freigestellt, weisser Hintergrund)', widget: image, required: false }
+              - { name: alt, label: Bildbeschreibung, widget: string, required: false }
+              - { name: knopf, label: 'Knopf 1 – Text', widget: string, required: false }
+              - name: link
+                label: 'Knopf 1 – Link'
+                widget: string
+                required: false
+                hint: &linkhinweis 'Interne Seite als Pfad, z. B. /kontakt oder /maschinentypen/folieren – oder vollständige Adresse (https://…)'
+              - { name: knopf2, label: 'Knopf 2 – Text', widget: string, required: false }
+              - { name: link2, label: 'Knopf 2 – Link', widget: string, required: false, hint: *linkhinweis }
+          - label: Text
+            name: text
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string, required: false }
+              - { name: inhalt, label: Text, widget: markdown, required: false }
+          - label: Bild und Text
+            name: bildtext
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: oberzeile, label: Oberzeile, widget: string, required: false }
+              - { name: titel, label: Titel, widget: string, required: false }
+              - { name: inhalt, label: Text, widget: markdown, required: false }
+              - { name: bild, label: Bild, widget: image, required: false }
+              - { name: alt, label: Bildbeschreibung, widget: string, required: false }
+              - { name: umgekehrt, label: 'Bild links', widget: boolean, required: false }
+              - { name: knopf, label: Knopftext, widget: string, required: false }
+              - { name: link, label: Knopflink, widget: string, required: false, hint: *linkhinweis }
+          - label: Karten (Maschinen, Leistungen, Ausführungen)
+            name: karten
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string, required: false }
+              - { name: einleitung, label: Einleitung, widget: text, required: false }
+              - { name: spalten, label: Spalten, widget: select, options: ['2', '3', '4'], default: '3', required: false }
+              - name: bildformat
+                label: Bildformat
+                widget: select
+                required: false
+                default: breit
+                options:
+                  - { label: 'Breit (3:2, Produktfoto)', value: breit }
+                  - { label: 'Quadratisch (Produktfoto)', value: quadrat }
+                  - { label: 'Foto randlos (4:3)', value: frei }
+              - name: eintraege
+                label: Karten
+                label_singular: Karte
+                widget: list
+                summary: '{{titel}}'
+                fields:
+                  - { name: titel, label: Titel, widget: string }
+                  - { name: text, label: Text, widget: markdown, required: false }
+                  - { name: bild, label: Bild, widget: image, required: false }
+                  - { name: alt, label: Bildbeschreibung, widget: string, required: false }
+                  - { name: link, label: Link, widget: string, required: false, hint: *linkhinweis }
+                  - { name: linktext, label: 'Linktext (Standard: «Mehr erfahren»)', widget: string, required: false }
+          - label: Unterseiten (automatisch)
+            name: unterseiten
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string, required: false }
+              - { name: einleitung, label: Einleitung, widget: text, required: false }
+          - label: Kennzahlen
+            name: kennzahlen
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - { name: titel, label: Titel, widget: string, required: false }
+              - name: eintraege
+                label: Kennzahlen
+                label_singular: Kennzahl
+                widget: list
+                summary: '{{zahl}} – {{beschriftung}}'
+                fields:
+                  - { name: zahl, label: 'Zahl (z. B. «1979» oder «bis 180»)', widget: string }
+                  - { name: beschriftung, label: Beschriftung, widget: string }
+          - label: Ablauf / Schritte
+            name: schritte
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string, required: false }
+              - { name: einleitung, label: Einleitung, widget: text, required: false }
+              - name: eintraege
+                label: Schritte
+                label_singular: Schritt
+                widget: list
+                summary: '{{titel}}'
+                fields:
+                  - { name: titel, label: Titel, widget: string }
+                  - { name: text, label: Text, widget: markdown, required: false }
+                  - { name: bild, label: Bild, widget: image, required: false }
+          - label: Fragen und Antworten
+            name: faq
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string, required: false }
+              - name: fragen
+                label: Fragen
+                label_singular: Frage
+                widget: list
+                summary: '{{frage}}'
+                fields:
+                  - { name: frage, label: Frage, widget: string }
+                  - { name: antwort, label: Antwort, widget: markdown }
+          - label: Logos (Referenzen)
+            name: logos
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string, required: false }
+              - { name: text, label: Text, widget: markdown, required: false }
+              - name: eintraege
+                label: Logos
+                label_singular: Logo
+                widget: list
+                summary: '{{name}}'
+                fields:
+                  - { name: name, label: Firmenname, widget: string }
+                  - { name: bild, label: Logo, widget: image }
+          - label: Handlungsaufruf
+            name: aufruf
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string }
+              - { name: text, label: Text, widget: text, required: false }
+              - { name: beschriftung, label: Knopftext, widget: string }
+              - { name: link, label: Link, widget: string, hint: *linkhinweis }
+          - label: Kontaktangaben
+            name: kontakt
+            widget: object
+            summary: '{{titel}}'
+            fields:
+              - *hell
+              - { name: titel, label: Titel, widget: string, required: false }
+              - { name: text, label: 'Text (Telefon, E-Mail und Adresse kommen aus den Einstellungen)', widget: markdown, required: false }
+
+  - name: einstellungen
+    label: Einstellungen
+    editor: { preview: false }
+    files:
+      - name: allgemein
+        label: Firma und Kontakt
+        file: src/data/einstellungen.json
+        fields:
+          - { name: firma, label: Firma, widget: string }
+          - { name: kurzname, label: 'Kurzname (Logo-Beschreibung)', widget: string }
+          - { name: slogan, label: 'Slogan (Fusszeile)', widget: text }
+          - { name: strasse, label: Strasse, widget: string }
+          - { name: ort, label: 'PLZ und Ort', widget: string }
+          - { name: telefon, label: Telefon, widget: string }
+          - { name: email, label: E-Mail, widget: string }
+          - { name: oeffnungszeiten, label: 'Geschäftszeiten', widget: string, required: false }
+          - { name: ersatzteile, label: 'Ersatzteil-Katalog (Adresse)', widget: string, required: false }
+          - { name: facebook, label: Facebook, widget: string, required: false }
+          - { name: instagram, label: Instagram, widget: string, required: false }
+          - { name: youtube, label: YouTube, widget: string, required: false }
+          - { name: akzentfarbe, label: 'Hauptfarbe (Blau)', widget: color }
+          - { name: zweitfarbe, label: 'Zweitfarbe (Rot)', widget: color }
+          - { name: demo, label: 'Demo-Modus (Google-Sperre «noindex»)', widget: boolean }
+      - name: navigation
+        label: Navigation
+        file: src/data/navigation.json
+        fields:
+          - name: haupt
+            label: Hauptmenü
+            label_singular: Menüpunkt
+            widget: list
+            summary: '{{titel}}'
+            fields:
+              - { name: titel, label: Titel, widget: string }
+              - { name: link, label: Link, widget: string, hint: *linkhinweis }
+              - name: unterpunkte
+                label: Unterpunkte
+                label_singular: Unterpunkt
+                widget: list
+                required: false
+                summary: '{{titel}}'
+                fields:
+                  - { name: titel, label: Titel, widget: string }
+                  - { name: link, label: Link, widget: string, hint: *linkhinweis }
+          - name: knopf
+            label: Knopf oben rechts
+            widget: object
+            fields:
+              - { name: titel, label: Text, widget: string }
+              - { name: link, label: Link, widget: string, hint: *linkhinweis }
+          - name: fuss
+            label: Links in der Fusszeile
+            label_singular: Link
+            widget: list
+            summary: '{{titel}}'
+            fields:
+              - { name: titel, label: Titel, widget: string }
+              - { name: link, label: Link, widget: string, hint: *linkhinweis }

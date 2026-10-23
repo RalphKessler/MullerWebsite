@@ -1,0 +1,35 @@
+titel: Dichtungsmontage-Anlagen
+oberzeile: Bürsten und Dichtungen
+einleitung: Dichtungsmontage-Anlagen unterstützen das Einziehen der Dichtungen in die Profilnut. Die Profile werden lediglich von Hand eingeschoben – danach arbeitet die Anlage autonom.
+bild: /uploads/typ-dichtungsmontage.webp
+kurz: Eindrücken von Dichtungen aus Gummi, PTFE, Silikon, EPDM, FPM u. v. m.
+reihenfolge: 2
+bloecke:
+  - type: schritte
+    titel: Arbeitsablauf
+    eintraege:
+      - titel: Einführen
+        text: Das Profil wird von Hand in die Dichtungsmontage-Anlage eingeführt.
+      - titel: Ansetzen
+        text: Das Profil wird zur Einschiebe-Einheit befördert, die die Dichtung an der vorgesehenen Stelle ein Stück eindrückt.
+      - titel: Eindrücken und abschneiden
+        text: Das Profil wird weitertransportiert, während die Dichtung eingedrückt wird. An der richtigen Stelle stoppt es automatisch und die Dichtung wird abgeschnitten.
+      - titel: Entnehmen
+        text: Die Anlage befördert das fertige Profil auf einen Entnahmetisch.
+  - type: bildtext
+    hell: true
+    titel: Arten der Dichtungsmontage-Anlagen
+    inhalt: |
+      Das Eindrücken von Dichtungen bringt je nach Geometrie und Material ganz unterschiedliche Anforderungen mit sich. Neben unseren serienmässig produzierten Anlagen entwickeln wir deshalb auch Lösungen nach den spezifischen Anforderungen unserer Kunden.
+
+      **Verarbeitete Materialien:** Gummi, PTFE, Silikon, EPDM, FPM und viele mehr.
+    bild: /uploads/typ-dichtungsmontage.webp
+    alt: Dichtungsmontage-Anlage
+  - type: text
+    titel: Ihr Vorteil
+    inhalt: In Zeiten steigender Personalkosten sparen Sie mit automatischen Dichtungsmontage-Anlagen bares Geld und machen den Standortvorteil von Niedriglohnländern wett. Zudem reduziert die Automatisierung die Fehlerquote – das erhöht die Qualität Ihrer Produkte und die Zufriedenheit Ihrer Kunden.
+  - type: aufruf
+    titel: Dichtungsmontage automatisieren?
+    text: Wir verraten Ihnen gerne mehr über solche Prozesse.
+    beschriftung: Kontakt aufnehmen
+    link: /kontakt
