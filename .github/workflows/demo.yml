@@ -1,14 +1,12 @@
 # Demo-Seite auf GitHub Pages: baut bei jedem Push (auch aus dem CMS) und veröffentlicht unter
 # https://<konto>.github.io/<repository>/
-# Voraussetzung: öffentliches Repository oder kostenpflichtiger GitHub-Plan,
+# Voraussetzung: öffentliches Repository (oder kostenpflichtiger GitHub-Plan),
 # dann Repository → Settings → Pages → Source: «GitHub Actions».
-# Vorerst nur manuell startbar (Actions → «Demo veröffentlichen» → Run workflow);
-# für automatische Builds bei jedem Push den «push»-Block wieder aktivieren.
 name: Demo veröffentlichen
 
 on:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main, claude/beautiful-pasteur-yrfwm8]
   workflow_dispatch:
 
 permissions:
