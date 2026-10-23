@@ -42,7 +42,8 @@ LIVE=true npm run build   # Live-Build (TODO-Platzhalter ausgeblendet)
 ## Demo-Seite (GitHub Pages)
 
 Der Workflow `.github/workflows/demo.yml` baut bei jedem Push – auch bei Änderungen aus dem CMS – und veröffentlicht unter
-<https://ralphkessler.github.io/MullerWebsite/>. Einmalig: Repository → **Settings → Pages → Source: «GitHub Actions»**.
+<https://ralphkessler.github.io/MullerWebsite/>. Nur möglich bei öffentlichem Repository oder kostenpflichtigem GitHub-Plan;
+dann **Settings → Pages → Source: «GitHub Actions»** und im Workflow den `push`-Auslöser aktivieren.
 Der Unterpfad wird über `BASE_PATH` gesetzt; alle Links und Bilder laufen über `link()` bzw. `pfad()` in `src/lib/hilfen.ts`.
 
 ## Online stellen (Cloudflare Pages)
