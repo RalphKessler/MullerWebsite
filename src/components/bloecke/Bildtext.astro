@@ -1,5 +1,5 @@
 ---
-import { link, markdown, zeile } from '../../lib/hilfen';
+import { link, markdown, pfad, zeile } from '../../lib/hilfen';
 const { oberzeile, titel, inhalt, bild, alt, umgekehrt, knopf, link: ziel } = Astro.props;
 ---
 <div class:list={['container', 'raster', { umgekehrt }]}>
@@ -11,7 +11,7 @@ const { oberzeile, titel, inhalt, bild, alt, umgekehrt, knopf, link: ziel } = As
   </div>
   {bild && (
     <figure class="bild">
-      <img src={bild} alt={alt ?? ''} loading="lazy" decoding="async" />
+      <img src={pfad(bild)} alt={alt ?? ''} loading="lazy" decoding="async" />
     </figure>
   )}
 </div>

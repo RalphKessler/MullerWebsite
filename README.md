@@ -39,6 +39,12 @@ LIVE=true npm run build   # Live-Build (TODO-Platzhalter ausgeblendet)
 
 **Platzhalter-Regel:** fehlende Angaben als `TODO: …` erfassen. Im Test-Build gelb markiert, im Live-Build (`LIVE=true`) ausgeblendet.
 
+## Demo-Seite (GitHub Pages)
+
+Der Workflow `.github/workflows/demo.yml` baut bei jedem Push – auch bei Änderungen aus dem CMS – und veröffentlicht unter
+<https://ralphkessler.github.io/MullerWebsite/>. Einmalig: Repository → **Settings → Pages → Source: «GitHub Actions»**.
+Der Unterpfad wird über `BASE_PATH` gesetzt; alle Links und Bilder laufen über `link()` bzw. `pfad()` in `src/lib/hilfen.ts`.
+
 ## Online stellen (Cloudflare Pages)
 
 1. Cloudflare → Workers & Pages → Pages-Projekt mit diesem Repository verbinden.

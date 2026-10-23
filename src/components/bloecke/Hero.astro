@@ -1,5 +1,5 @@
 ---
-import { link, zeile } from '../../lib/hilfen';
+import { link, pfad, zeile } from '../../lib/hilfen';
 const { oberzeile, titel, text, bild, alt, knopf, link: ziel, knopf2, link2 } = Astro.props;
 ---
 <div class="hero">
@@ -15,7 +15,7 @@ const { oberzeile, titel, text, bild, alt, knopf, link: ziel, knopf2, link2 } = 
     </div>
     {bild && (
       <div class="bild">
-        <img src={bild} alt={alt ?? ''} fetchpriority="high" decoding="async" />
+        <img src={pfad(bild)} alt={alt ?? ''} fetchpriority="high" decoding="async" />
       </div>
     )}
   </div>

@@ -1,21 +1,21 @@
 ---
 import navigation from '../data/navigation.json';
 import einstellungen from '../data/einstellungen.json';
-import { link } from '../lib/hilfen';
+import { link, pfad } from '../lib/hilfen';
 
 type Punkt = { titel: string; link: string; unterpunkte?: { titel: string; link: string }[] };
 const haupt = navigation.haupt as Punkt[];
 const aktuell = Astro.url.pathname;
 const istAktiv = (ziel: string) => {
   const url = link(ziel);
-  return url !== '/de/' && aktuell.startsWith(url);
+  return url !== link('/') && aktuell.startsWith(url);
 };
 const tel = einstellungen.telefon.replace(/[^+\d]/g, '');
 ---
 <header class="kopf">
   <div class="container leiste">
-    <a class="marke" href="/de/" aria-label={`${einstellungen.firma} – Startseite`}>
-      <img src="/logo.svg" alt={einstellungen.kurzname} width="172" height="50" />
+    <a class="marke" href={link("/")} aria-label={`${einstellungen.firma} – Startseite`}>
+      <img src={pfad("/logo.svg")} alt={einstellungen.kurzname} width="172" height="50" />
     </a>
 
     <button class="menu-knopf" type="button" aria-expanded="false" aria-controls="hauptmenu">

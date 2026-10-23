@@ -1,5 +1,5 @@
 ---
-import { zeile } from '../lib/hilfen';
+import { link, zeile } from '../lib/hilfen';
 
 interface Props {
   titel: string;
@@ -12,11 +12,11 @@ const { titel, oberzeile, einleitung, krumen } = Astro.props;
 <header class="seitenkopf">
   <div class="container">
     <nav aria-label="Brotkrumen" class="krumen">
-      <a href="/de/">Startseite</a>
+      <a href={link("/")}>Startseite</a>
       {krumen.map((k) => (
         <>
           <span aria-hidden="true">/</span>
-          <a href={k.url}>{k.titel}</a>
+          <a href={link(k.url)}>{k.titel}</a>
         </>
       ))}
     </nav>

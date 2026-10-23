@@ -1,5 +1,5 @@
 ---
-import { link, markdown, zeile } from '../../lib/hilfen';
+import { link, markdown, pfad, zeile } from '../../lib/hilfen';
 const { titel, einleitung, spalten, bildformat, eintraege } = Astro.props;
 ---
 <div class="container">
@@ -16,7 +16,7 @@ const { titel, einleitung, spalten, bildformat, eintraege } = Astro.props;
         <Tag class:list={['karte', { verlinkt: e.link }]} href={e.link ? link(e.link) : undefined}>
           {e.bild && (
             <div class="bild">
-              <img src={e.bild} alt={e.alt ?? ''} loading="lazy" decoding="async" />
+              <img src={pfad(e.bild)} alt={e.alt ?? ''} loading="lazy" decoding="async" />
             </div>
           )}
           <div class="inhalt">

@@ -5,7 +5,7 @@ export type Seite = CollectionEntry<'seiten'>;
 /** Alle veröffentlichten Seiten (ohne Entwürfe). */
 export const alleSeiten = () => getCollection('seiten', (s) => !s.data.entwurf);
 
-/** «de/maschinentypen/folieren» → «/de/maschinentypen/folieren/» */
+/** «de/maschinentypen/folieren» → «/de/maschinentypen/folieren/» (ohne Unterpfad, für link()) */
 export const seitenUrl = (id: string) => `/${id}/`;
 
 /** Direkte Unterseiten einer Seite, sortiert nach «reihenfolge», dann Titel. */

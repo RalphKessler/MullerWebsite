@@ -3,7 +3,7 @@ import '../styles/global.css';
 import Kopf from '../components/Kopf.astro';
 import Fuss from '../components/Fuss.astro';
 import einstellungen from '../data/einstellungen.json';
-import { zeige } from '../lib/hilfen';
+import { pfad, zeige } from '../lib/hilfen';
 
 interface Props {
   titel: string;
@@ -23,7 +23,7 @@ const kanonisch = new URL(Astro.url.pathname, Astro.site);
     {zeige(beschreibung) && <meta name="description" content={zeige(beschreibung)} />}
     {einstellungen.demo && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={kanonisch} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={pfad("/favicon.svg")} type="image/svg+xml" />
     <meta property="og:title" content={seitentitel} />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content={einstellungen.akzentfarbe} />

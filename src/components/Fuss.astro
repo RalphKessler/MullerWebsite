@@ -1,7 +1,7 @@
 ---
 import navigation from '../data/navigation.json';
 import einstellungen from '../data/einstellungen.json';
-import { link, zeile } from '../lib/hilfen';
+import { link, pfad, zeile } from '../lib/hilfen';
 
 const tel = einstellungen.telefon.replace(/[^+\d]/g, '');
 const sozial = [
@@ -13,7 +13,7 @@ const sozial = [
 <footer class="fuss">
   <div class="container raster">
     <div class="firma">
-      <img src="/logo.svg" alt={einstellungen.kurzname} width="172" height="50" />
+      <img src={pfad("/logo.svg")} alt={einstellungen.kurzname} width="172" height="50" />
       <p set:html={zeile(einstellungen.slogan)} />
     </div>
     <div>
@@ -37,10 +37,10 @@ const sozial = [
     <div>
       <h2>Service</h2>
       <ul>
-        <li><a href="/de/support/">Support</a></li>
+        <li><a href={link("/support")}>Support</a></li>
         <li><a href={einstellungen.ersatzteile} rel="noopener">Ersatzteil-Katalog</a></li>
-        <li><a href="/de/antworten/">Antworten (FAQ)</a></li>
-        <li><a href="/de/kontakt/vertretungen/">Weltweite Vertretungen</a></li>
+        <li><a href={link("/antworten")}>Antworten (FAQ)</a></li>
+        <li><a href={link("/kontakt/vertretungen")}>Weltweite Vertretungen</a></li>
       </ul>
     </div>
   </div>

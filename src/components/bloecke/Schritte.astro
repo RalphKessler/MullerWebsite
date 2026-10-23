@@ -1,5 +1,5 @@
 ---
-import { markdown, zeile } from '../../lib/hilfen';
+import { markdown, pfad, zeile } from '../../lib/hilfen';
 const { titel, einleitung, eintraege } = Astro.props;
 ---
 <div class="container">
@@ -12,7 +12,7 @@ const { titel, einleitung, eintraege } = Astro.props;
   <ol class="schritte">
     {eintraege.map((e: any, i: number) => (
       <li>
-        {e.bild && <img src={e.bild} alt="" loading="lazy" decoding="async" />}
+        {e.bild && <img src={pfad(e.bild)} alt="" loading="lazy" decoding="async" />}
         <span class="nr">{String(i + 1).padStart(2, '0')}</span>
         <h3 set:html={zeile(e.titel)} />
         {e.text && <div class="text" set:html={markdown(e.text)} />}

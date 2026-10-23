@@ -14,7 +14,7 @@ backend:
     deleteMedia: 'Gelöscht: «{{path}}»'
 
 site_url: https://demo.muller.ch
-logo: { src: /logo.svg }
+logo: { src: ../logo.svg }
 media_folder: public/uploads
 public_folder: /uploads
 slug: { encoding: ascii, clean_accents: true }

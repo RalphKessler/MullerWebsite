@@ -6,6 +6,15 @@ export const LIVE = process.env.LIVE === 'true';
 
 const TODO = /TODO:/;
 
+// Unterpfad der Website (z. B. «/MullerWebsite» auf GitHub Pages), sonst leer
+export const BASIS = import.meta.env.BASE_URL.replace(/\/+$/, '');
+
+/** Datei im public-Ordner («/uploads/…», «/logo.svg») mit Unterpfad versehen. */
+export function pfad(p?: string | null): string {
+  if (!p) return '';
+  return p.startsWith('/') && !p.startsWith('//') ? `${BASIS}${p}` : p;
+}
+
 /** Ist der Text ein Platzhalter (enthält «TODO:»)? */
 export const istTodo = (s?: string | null) => !!s && TODO.test(s);
 
@@ -35,17 +44,20 @@ export function markdown(s?: string | null): string {
     .join('\n\n');
   const html = marked
     .parse(absaetze, { async: false, breaks: true })
-    // interne Links aus dem CMS («/kontakt») mit Sprachpräfix versehen
-    .replace(/href="(\/(?!de\/|uploads\/)[^"]*)"/g, (_, ziel: string) => `href="${link(ziel)}"`);
+    // interne Links aus dem CMS («/kontakt») mit Sprachpräfix und Unterpfad versehen
+    .replace(/href="(\/(?!\/)[^"]*)"/g, (_, ziel: string) =>
+      `href="${ziel.startsWith('/uploads/') ? pfad(ziel) : link(ziel)}"`,
+    )
+    .replace(/src="(\/(?!\/)[^"]*)"/g, (_, ziel: string) => `src="${pfad(ziel)}"`);
   return html.replace(/<(p|li|h[2-4])>([^<]*TODO:[^]*?)<\/\1>/g, '<$1><mark class="todo">$2</mark></$1>');
 }
 
-/** Interne Links mit Sprachpräfix versehen: «/leistungen» → «/de/leistungen/». */
+/** Interne Links mit Sprachpräfix und Unterpfad versehen: «/support» → «/de/support/». */
 export function link(ziel?: string | null, lang = 'de'): string {
   if (!ziel) return '#';
   if (/^(https?:|mailto:|tel:|#)/.test(ziel)) return ziel;
-  const pfad = ziel.replace(/^\/+/, '').replace(/^de\/?/, '').replace(/\/+$/, '');
-  return pfad ? `/${lang}/${pfad}/` : `/${lang}/`;
+  const seite = ziel.replace(/^\/+/, '').replace(/^de\/?/, '').replace(/\/+$/, '');
+  return seite ? `${BASIS}/${lang}/${seite}/` : `${BASIS}/${lang}/`;
 }
 
 export const datum = (d: Date) =>

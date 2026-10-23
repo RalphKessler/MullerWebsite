@@ -1,14 +1,16 @@
 ---
 // Einstieg ohne Sprachpfad → deutsche Startseite
+import { link } from '../lib/hilfen';
+const ziel = link('/');
 ---
 <!doctype html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=/de/" />
-    <link rel="canonical" href="/de/" />
+    <meta http-equiv="refresh" content={`0; url=${ziel}`} />
+    <link rel="canonical" href={ziel} />
     <meta name="robots" content="noindex" />
     <title>Müller TB Technologies AG</title>
   </head>
-  <body><a href="/de/">Weiter zur Website</a></body>
+  <body><a href={ziel}>Weiter zur Website</a></body>
 </html>
