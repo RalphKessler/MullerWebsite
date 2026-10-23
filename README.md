@@ -48,7 +48,7 @@ Der Unterpfad wird über `BASE_PATH` gesetzt; alle Links und Bilder laufen über
 ## Online stellen (Cloudflare Pages)
 
 1. Cloudflare → Workers & Pages → Pages-Projekt mit diesem Repository verbinden.
-2. Build-Befehl `npm run build`, Ausgabeordner `dist`, Umgebungsvariable `NODE_VERSION=22`.
+2. Build-Befehl `npm run build`, Ausgabeordner `dist`, Umgebungsvariable `NODE_VERSION=22.23.4`.
 3. Für den Livegang: `LIVE=true` und `SITE_URL=https://muller.ch` setzen, in den Einstellungen «Demo-Modus» ausschalten
    und `public/robots.txt` freigeben.
 
